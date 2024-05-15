@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
-</head>
-<body>
-    <form id="collectData">
-        <label for="UserName"><b>User Name: </b></label>
-        <input type="text" name="UserName" id="UserName" placeholder="Enter Your UserName">
+    <style>
+      table tbody .design{
+        background-color: red;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
 
-        <input type="submit" name="" id="">
-    </form>
+    <form class="w-25 m-3" id="CollectData">
+        <div class="mb-3">
+            <label for="UserName" class="form-label">Student Name:</label>
+            <input type="text" class="form-control" id="UserName" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address:</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="Dob" class="form-label">Date Of Birth:</label>
+            <input type="date" class="form-control" id="Dob" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="City" class="form-label">City:</label>
+            <select name="Select City" id="City">
+                <option value="Select City">Select City</option>
+                <option value="Surat">Surat</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Mumbai">Mumbai</option>
+            </select>
+        </div>
+        <div class="mb-3">
+          <label for="Password" class="form-label">Password:</label>
+          <input type="Password" class="form-control" id="Password">
+        </div>
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        <input type="submit">
+       
+      </form>
+      
 
-    <table>
+
+      <table class="table">
         <thead>
             <tr>
-                <td>UserName</td>
+                <th class="bg-warning">UserName</th>
+                <th class="bg-warning">Email</th>
+                <th class="bg-warning">Dob</th>
+                <th class="bg-warning">City</th>
+                <th class="bg-warning">Password</th>
+                <th id="DeleteAll" class="bg-danger">DeleteAll</th>
             </tr>
         </thead>
         <tbody id="tbody">
 
         </tbody>
-    </table>
-</body>
-<script src="./index.js"></script>
+      </table>
+  </body>
+  <script src="./index.js"></script>
+<hr>
 </html>
