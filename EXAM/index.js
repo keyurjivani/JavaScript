@@ -34,7 +34,16 @@ const Uimake = () => {
         td6.innerHTML = ele.Exp
 
         let td7 = document.createElement("td");
-        td7.innerHTML = role();
+        if(ele.Exp > 5){
+            td7.innerHTML = "senior";
+        }
+        else{
+            td7.innerHTML = "junior";
+        }
+        
+        
+
+
         let td8 = document.createElement("td");
         td8.innerHTML = "Delete"
 
@@ -45,24 +54,15 @@ const Uimake = () => {
         document.getElementById("tbody").append(tr)
 
         td8.setAttribute("id","red");
-
+        
     })
-    User.map((ele)=>{
-        num = num + ele.name
-    })
-
+//     User.map((ele)=>{
+//         num = num + ele.name
+//     })
+//  console.log(num);
 
 }
-console.log(num);
-const role = (Exp) => {
-    if(Exp > 5){
-        console.log("Senior");
-    }
-    else
-    {
-        console.log("junior");
-    }
-}
+
 
 
 const handleData = (e) => {
@@ -82,14 +82,7 @@ const handleData = (e) => {
     Uimake();
 }
 
-document.getElementById("Role").addEventListener("submit",()=>{
-    if(Exp > 5){
-        console.log("senior");
-    }
-    else{
-        console.log("junior");
-    }
-})
+     
 
 
 
