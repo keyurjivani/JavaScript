@@ -1,4 +1,7 @@
 let User = [];
+for(let i=0;i<User.length; i++){
+    console.log(i+1)
+}
 
 const Delete =(index) =>{
 
