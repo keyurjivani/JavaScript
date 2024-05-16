@@ -59,11 +59,6 @@ const Uimake = () => {
         td8.setAttribute("id","red");
         
     })
-//     User.map((ele)=>{
-//         num = num + ele.name
-//     })
-//  console.log(num);
-
 }
 
 
@@ -84,12 +79,6 @@ const handleData = (e) => {
 
     Uimake();
 }
-
-     
-
-
-
-// document.getElementById("div").addEventListener("submit",show)
 
 document.getElementById("collect").addEventListener("submit",handleData)
 document.getElementById("FireAll").addEventListener("click",()=>{
