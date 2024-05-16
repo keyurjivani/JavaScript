@@ -53,6 +53,11 @@ const Uimake = () => {
     td8.setAttribute("id", "red");
 
     Emp_Count();
+
+    // User.map((ele)=>{
+    //     num += ele.name
+    // })
+    // console.log(num);
   });
 };
 
@@ -74,17 +79,17 @@ const handleData = (e) => {
 };
 
 const Emp_Count = () => {
-  let total = 0;
+  let Count = 0;
   let salary = 0;
   User.map((ele, i) => {
-    total++;
+    Count++;
   });
 
   User.map((ele, i) => {
     salary = Number(salary) + Number(ele.salary);
   });
 
-  document.getElementById("Emp_Count").innerHTML = `Employe : ${total}`;
+  document.getElementById("Emp_Count").innerHTML = `Employe : ${Count}`;
   document.getElementById("Salary_count").innerHTML = `Salary_count : ${salary}`;
 };
 
