@@ -6,6 +6,10 @@ const del = (index) =>{
     ui();
 }
 
+const buy = () =>{
+    let div3 = alert("Thank's For Shopping..");
+}
+
 const ui= () =>{
     document.getElementById("Display").innerHTML = " ";
 
@@ -27,6 +31,7 @@ const ui= () =>{
 
         let div3 = document.createElement("div");
         div3.innerHTML = "buy";
+        div3.addEventListener("click",()=>buy(i))
         div3.setAttribute("id","div3");
 
         let div1 = document.createElement("div");
@@ -53,12 +58,9 @@ const handleData = (e) =>{
         Image : document.getElementById("Image").value,
         Title : document.getElementById("Title").value,
         Price : document.getElementById("Price").value,
-        // Delete : document.getElementById("Delete"),
     }
 
     Array.push(Data);
-// console.log(Data);
-
     ui();
 }
 

@@ -21,8 +21,8 @@ img{
     border: 1px solid black;
     border-radius: 10px;
 
-    /* display: grid; */
-    /* grid-template-columns: repeat(4,1fr); */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 .uiImage{
     height: 250px; 
@@ -39,17 +39,23 @@ img{
     border-radius: 10px;
 
 }
+#div2{
+    background: red;
+    color: white;
+    font-weight: 600;
+}
+#div3{
+    background: rgb(34, 106, 34);
+    color: white;
+    font-weight: 600;
+}
 #div1{
     height: 45px;
     width: 295px;
     display: flex;
     text-align: center;
     border-radius: 10px;
-
     /* border: 1px solid black; */
-
-    
-    
     /* border: 1px solid black; */
     
 
