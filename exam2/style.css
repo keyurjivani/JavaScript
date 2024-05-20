@@ -1,0 +1,56 @@
+img{
+    height: 400px;
+}
+
+/* #Display{
+    height: 200px;
+    width: 100%;
+    border: 1px solid black;
+} */
+.dis{
+    height: max-content; 
+    width: max-content;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+#Display{
+    /* height: 500px; */
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    /* display: grid; */
+    /* grid-template-columns: repeat(4,1fr); */
+}
+.uiImage{
+    height: 250px; 
+    border-radius: 10px;
+
+    width: 250px;
+    margin: 10px;
+}
+#div2,#div3{
+    height: 28px; 
+    width: 48%;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+#div1{
+    height: 45px;
+    width: 295px;
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+
+    /* border: 1px solid black; */
+
+    
+    
+    /* border: 1px solid black; */
+    
+
+}
