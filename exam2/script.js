@@ -30,7 +30,7 @@ const ui= () =>{
         div2.setAttribute("id","div2");
 
         let div3 = document.createElement("div");
-        div3.innerHTML = "buy";
+        div3.innerHTML = "Buy";
         div3.addEventListener("click",()=>buy(i))
         div3.setAttribute("id","div3");
 
@@ -44,9 +44,7 @@ const ui= () =>{
         div.setAttribute("class","dis")
 
         document.getElementById("Display").append(div);
-
-        
-
+        time();
     })
 }
 
@@ -63,5 +61,28 @@ const handleData = (e) =>{
     Array.push(Data);
     ui();
 }
+const time = () => {
+    var timeleft = 120;
+
+        var Timer = setInterval(function time(){
+        document.getElementById("countdown").innerHTML = " Sale Start Few Second : " + timeleft + 
+        "&nbsp"+"seconds remaining";
+
+        timeleft -= 1;
+        if(timeleft <= 0){
+            clearInterval(Timer);
+            document.getElementById("countdown").innerHTML = "Time is up!"
+        }
+        }, 1000);
+
+        console.log(countdown);
+}
+
+
+
 
 document.getElementById("collect").addEventListener("submit",handleData);
+document.getElementById("collect").addEventListener("submit",time);
+
+
+
