@@ -1,0 +1,26 @@
+#Display, #button {
+    margin-bottom: 20px;
+}
+#button{
+    font-size: 20px;
+    border-radius: 8px;
+    
+}
+
+#Responsive{
+    /* border: 1px solid black; */
+    position: relative;
+    top: 180px;
+}
+
+#winner{
+    font-size: x-large;
+}
+
+.posi{
+    width: 1000px;
+    height: 500px;
+    border: 1px solid black;
+
+
+}

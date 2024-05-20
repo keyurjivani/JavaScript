@@ -1,0 +1,44 @@
+#main{
+    height: 680px;
+}
+#Ui{
+    height: 200px;
+    width: 500px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px 5px rgb(218, 188, 188);
+}
+#date{
+    height: 50px;
+    font-family: "Merriweather", serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+#Hours{
+    width: 100px;
+    height: 100px;
+    font-family: "Merriweather", serif;
+
+}
+#Min{
+    width: 100px;
+    height: 100px;
+    font-family: "Merriweather", serif;
+
+
+}
+#Sec{
+    width: 100px;
+    height: 100px;
+    font-family: "Merriweather", serif;
+
+}
+#day{
+
+    position: relative;
+    top: 40px;
+    font-family: "Merriweather", serif;
+
+}
+#SetUi{
+    height: 110px;
+    
+}
