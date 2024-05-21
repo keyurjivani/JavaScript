@@ -62,9 +62,9 @@ const handleData = (e) =>{
     ui();
 }
 const time = () => {
-    var timeleft = 60;
+    let timeleft = 60;
 
-        var Timer = setInterval(function time(){
+        let Timer = setInterval(function time(){
         document.getElementById("countdown").innerHTML = " Sale Start Few Second : " + timeleft + 
         "&nbsp"+"seconds remaining";
 
@@ -76,6 +76,7 @@ const time = () => {
         }, 1000);
 
         console.log(countdown);
+
 }
 
 
