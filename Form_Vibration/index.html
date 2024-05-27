@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            text-align: center;
+        }
+        form input{
+          width: 250px;
+          border-radius: 8px;
+        }
+        input:focus{
+            outline: none;
+        }
+        .mystyle{
+            color: rgb(18, 102, 102);
+        }
+
+        input
+  {
+    width: 10%;
+    font-size: 1rem;
+    padding: 0.25rem;
+    vertical-align: middle;
+    box-shadow: 0 0 0 transparent;
+    border: 1px solid #999;
+    outline: 0 none;
+    transition: box-shadow 0.5s;
+    
+   
+  }
+  .error
+    {
+      animation: shake 0.2s ease-in-out 0s 2;
+      /* box-shadow: 0 0 0.5em red; */
+    }
+    @keyframes shake {
+  0% { margin-left: 0rem; }
+  25% { margin-left: 0.5rem; }
+  75% { margin-left: -0.5rem; }
+  100% { margin-left: 0rem; }
+}
+h3{
+  color: white;
+}
+.design{
+  border: 1px solid rgb(246, 237, 237);
+  width: max-content;
+  padding: 10px;
+  border-radius: 8px;
+  /* height: max-content; */
+}
+button{
+  width: 200px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: medium;
+
+}
+span{
+  color: white;
+}
+    </style>
+</head>
+<body style="background-color: black; display: flex; justify-content: center;"> 
+    <form id="data" class="design">
+      <h3>Exhibition Invitation Form</h3>
+        <br>
+        <input id="Username" type="text" placeholder="Enter Username" required/><br>
+        <span id="u-msg" ></span><br>
+        <input type="number" id="num" placeholder="Enter Number" required><br>
+        <span id="ua-msg"></span><br>
+        <input type="email" id="email" placeholder="Enter Email" required><br>
+        <span id="uaa-msg" ></span><br>
+
+        <button>submit</button>
+    </form>
+    
+</body>
+<script src="./script.js"></script>
+</html>
