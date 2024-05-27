@@ -219,10 +219,16 @@ let questions = [
     b1.addEventListener("click",()=>{
         if(item.options.A == ans){
             b1.style.backgroundColor = ' green'
+            b1.style.color = 'White'
+            b1.style.fontSize = "20px"
+
             b1.style.width = "200px"
         }
         else{
             b1.style.backgroundColor = ' red'
+            b1.style.color = 'White'
+            b1.style.fontSize = "20px"
+
             b1.style.width = "200px"
 
         }
@@ -234,10 +240,16 @@ let questions = [
     b2.addEventListener("click",()=>{
         if(item.options.B == ans){
             b2.style.background = "green"
+            b2.style.color = 'White'
+            b2.style.fontSize = "20px"
+
             b2.style.width = "200px"
         }
         else{
             b2.style.background = " red"
+            b2.style.color = 'White'
+            b2.style.fontSize = "20px"
+
             b2.style.width = "200px"
 
 
@@ -250,11 +262,17 @@ let questions = [
     b3.addEventListener("click",()=>{
         if(item.options.C == ans){
             b3.style.background = "green"
+            b3.style.color = 'White'
+            b3.style.fontSize = "20px"
+
             b3.style.width = "200px"
 
         }
         else{
             b3.style.background = "red"
+            b3.style.color = 'White'
+            b3.style.fontSize = "20px"
+
             b3.style.width = "200px"
 
         }
@@ -265,11 +283,17 @@ let questions = [
     b4.addEventListener("click",()=>{
         if(item.options.D == ans){
             b4.style.background = "green"
+            b4.style.color = 'White'
+            b4.style.fontSize = "20px"
+
             b4.style.width = "200px"
 
         }
         else{
             b4.style.background = "red"
+            b4.style.color = 'White'
+            b4.style.fontSize = "20px"
+
             b4.style.width = "200px"
 
         }
@@ -289,6 +313,8 @@ let questions = [
 
     let div2 = document.createElement("div");
     div2.append(que,divtag)
+    // div2.style.border = '1 px  black'
+    div2.setAttribute("id","div2")
 
     document.getElementById("Display").append(div2)
 
@@ -308,6 +334,7 @@ const handle = (e) =>{
     console.log(data);
 
     questions.push(data);
+    console.log(questions);
 }
 
 
