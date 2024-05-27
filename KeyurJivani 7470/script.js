@@ -200,10 +200,10 @@ let questions = [
   questions.map((item,i)=>{
 
     let que = document.createElement("h4");
-    que.innerHTML = item.question;
+    que.innerHTML = "Question : "+ item.question ;
 
     let optA = document.createElement("p");
-    optA.innerHTML = item.options.A;
+    optA.innerHTML =  item.options.A;
     let optB = document.createElement("p");
     optB.innerHTML = item.options.B;
     let optC = document.createElement("p");
@@ -215,42 +215,42 @@ let questions = [
     // console.log(item.options.A);
     console.log(ans);
     let b1 = document.createElement("p");
-    b1.innerHTML = item.options.A
+    b1.innerHTML = "A : " + item.options.A
     b1.addEventListener("click",()=>{
         if(item.options.A == ans){
             b1.style.backgroundColor = ' green'
             b1.style.color = 'White'
             b1.style.fontSize = "20px"
 
-            b1.style.width = "200px"
+            b1.style.width = "220px"
         }
         else{
             b1.style.backgroundColor = ' red'
             b1.style.color = 'White'
             b1.style.fontSize = "20px"
 
-            b1.style.width = "200px"
+            b1.style.width = "220px"
 
         }
     })
 
 
     let b2 = document.createElement("p");
-    b2.innerHTML = item.options.B
+    b2.innerHTML = "B : " + item.options.B
     b2.addEventListener("click",()=>{
         if(item.options.B == ans){
             b2.style.background = "green"
             b2.style.color = 'White'
             b2.style.fontSize = "20px"
 
-            b2.style.width = "200px"
+            b2.style.width = "220px"
         }
         else{
             b2.style.background = " red"
             b2.style.color = 'White'
             b2.style.fontSize = "20px"
 
-            b2.style.width = "200px"
+            b2.style.width = "220px"
 
 
         }
@@ -258,14 +258,14 @@ let questions = [
 
     
     let b3 = document.createElement("p");
-    b3.innerHTML = item.options.C
+    b3.innerHTML = "C : " + item.options.C
     b3.addEventListener("click",()=>{
         if(item.options.C == ans){
             b3.style.background = "green"
             b3.style.color = 'White'
             b3.style.fontSize = "20px"
 
-            b3.style.width = "200px"
+            b3.style.width = "220px"
 
         }
         else{
@@ -273,20 +273,20 @@ let questions = [
             b3.style.color = 'White'
             b3.style.fontSize = "20px"
 
-            b3.style.width = "200px"
+            b3.style.width = "220px"
 
         }
     })
 
     let b4 = document.createElement("p");
-    b4.innerHTML = item.options.D
+    b4.innerHTML = "D : " + item.options.D
     b4.addEventListener("click",()=>{
         if(item.options.D == ans){
             b4.style.background = "green"
             b4.style.color = 'White'
             b4.style.fontSize = "20px"
 
-            b4.style.width = "200px"
+            b4.style.width = "220px"
 
         }
         else{
@@ -294,7 +294,7 @@ let questions = [
             b4.style.color = 'White'
             b4.style.fontSize = "20px"
 
-            b4.style.width = "200px"
+            b4.style.width = "220px"
 
         }
     })

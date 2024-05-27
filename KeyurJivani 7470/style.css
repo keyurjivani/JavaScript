@@ -1,8 +1,15 @@
-.divtag{
+/* .divtag{
     display: flex;
 
-}
+} */
 
 #div2{
     border: 2px solid black;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    background: #ffffff;
+
+    /* border: 10px 10px 10px 10px; */
+    /* background: #000; */
 }
