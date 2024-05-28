@@ -2,6 +2,20 @@
     display: flex;
 
 } */
+.form_div{
+    border: 2px solid black;
+    height: max-content;
+    width: max-content;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+input{
+    width: 220px;
+    height: 20px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
 
 #div2{
     border: 2px solid black;
@@ -12,4 +26,12 @@
 
     /* border: 10px 10px 10px 10px; */
     /* background: #000; */
+}
+
+.ui_div{
+    border: 2px solid black;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    background: #ffffff;
 }

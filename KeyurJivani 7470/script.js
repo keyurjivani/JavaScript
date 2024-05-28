@@ -1,5 +1,5 @@
-// let Array = []
-
+let Array = []
+// console.log(Array);
 let questions = [
     {
       "question": "What is the correct syntax for referring to an external script called 'script.js'?",
@@ -196,11 +196,25 @@ let questions = [
 
   console.log(questions);
 
+// const ui = () =>{
 
-  questions.map((item,i)=>{
+//   questions.push(Array)
+
+//   Array.map((ele)=>{
+//     let addQue = document.createElement("h3");
+//     addQue.innerHTML = ele.addQue;
+//   })
+// }
+
+
+
+  questions.map((item)=>{
 
     let que = document.createElement("h4");
     que.innerHTML = "Question : "+ item.question ;
+
+
+    
 
     let optA = document.createElement("p");
     optA.innerHTML =  item.options.A;
@@ -300,41 +314,145 @@ let questions = [
     })
 
     
-    
 
 
     let divtag = document.createElement("div");
     divtag.append(b1,b2,b3,b4);
     divtag.setAttribute("class","divtag")
 
-
-    // let div = document.createElement("div");
-    // div.append(optA,optB,optC,optD);
+    // let div3 = document.createElement("div");
+    // div3.append(addQue)
 
     let div2 = document.createElement("div");
     div2.append(que,divtag)
-    // div2.style.border = '1 px  black'
     div2.setAttribute("id","div2")
 
     document.getElementById("Display").append(div2)
+    // document.getElementById("Display").append(div3)
+
 
     
 
   })
+
+  const ui = () =>{
+    document.getElementById("dis1").innerHTML = ""
+
+
+    Array.map((ele)=>{
+      
+      let ans1 = ele.addCorrect
+      console.log(ans1);
+
+      let addQue = document.createElement("h3");
+      addQue.innerHTML = "Question : " + ele.addQue
+
+      let addA = document.createElement("p");
+      addA.innerHTML = "A : " + ele.addA
+      addA.addEventListener("click",()=>{
+        if(ele.addA == ans1){
+            addA.style.background = "green"
+            addA.style.color = 'White'
+            addA.style.fontSize = "20px"
+            addA.style.width = "220px"
+        }
+        else{
+          addA.style.background = "red"
+            addA.style.color = 'White'
+            addA.style.fontSize = "20px"
+            addA.style.width = "220px"
+        }
+      })
+
+      let addB = document.createElement("p");
+      addB.innerHTML = "B : " + ele.addB
+      addB.addEventListener("click",()=>{
+        if(ele.addB == ans1){
+          addB.style.background = "green"
+          addB.style.color = 'White'
+          addB.style.fontSize = "20px"
+          addB.style.width = "220px"
+        }
+        else{
+          addB.style.background = "red"
+          addB.style.color = 'White'
+          addB.style.fontSize = "20px"
+          addB.style.width = "220px"
+        }
+      })
+
+      let addC = document.createElement("p")
+      addC.innerHTML = "C : " + ele.addC
+      addC.addEventListener("click",()=>{
+        if(ele.addC == ans1){
+          addC.style.background = "green"
+          addC.style.color = 'White'
+          addC.style.fontSize = "20px"
+          addC.style.width = "220px"
+        }
+        else{
+          addC.style.background = "red"
+          addC.style.color = 'White'
+          addC.style.fontSize = "20px"
+          addC.style.width = "220px"
+        }
+      })
+
+      let addD = document.createElement("p")
+      addD.innerHTML = "D : " + ele.addD
+      addD.addEventListener("click",()=>{
+        if(ele.addD == ans1){
+          addD.style.background = "green"
+          addD.style.color = 'White'
+          addD.style.fontSize = "20px"
+          addD.style.width = "220px"
+        }
+        else{
+          addD.style.background = "red"
+          addD.style.color = 'White'
+          addD.style.fontSize = "20px"
+          addD.style.width = "220px"
+        }
+      })
+
+
+
+
+      let div = document.createElement("div")
+      div.append(addQue,addA,addB,addC,addD)
+      div.setAttribute("class","ui_div")
+
+    document.getElementById("dis1").append(div)
+
+  
+    })
+    // document.getElementById("dis1").innerHTML = ""
+  
+
+  }
+
+  
 const handle = (e) =>{
     e.preventDefault();
 
     let data = {
          addQue : document.getElementById("ques").value,
-         addA : document.getElementById("A_option").value,
-         addB : document.getElementById("B_option").value,
-         addC : document.getElementById("C_option").value,
-         addD : document.getElementById("D_option").value,
+
+         
+          addA : document.getElementById("A_option").value,
+          addB : document.getElementById("B_option").value,
+          addC : document.getElementById("C_option").value,
+          addD : document.getElementById("D_option").value,
+          addCorrect : document.getElementById("Correct_opt").value
+       
+
+        
     }
     console.log(data);
 
-    questions.push(data);
-    console.log(questions);
+    Array.push(data);
+    // console.log(questions);
+    ui();
 }
 
 
