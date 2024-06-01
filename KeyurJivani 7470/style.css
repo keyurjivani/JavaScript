@@ -2,6 +2,8 @@
     display: flex;
 
 } */
+
+
 .form_div{
     border: 2px solid black;
     height: max-content;
@@ -12,7 +14,7 @@
 
 input{
     width: 220px;
-    height: 20px;
+    height: 25px;
     margin-bottom: 5px;
     border-radius: 8px;
 }

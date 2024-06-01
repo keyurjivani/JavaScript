@@ -1,223 +1,212 @@
-let Array = []
-// console.log(Array);
 let questions = [
-    {
-      "question": "What is the correct syntax for referring to an external script called 'script.js'?",
-      "options": {
-        "A": "script name='script.js'",
-        "B": "script src='script.js'",
-        "C": "script href='script.js'",
-        "D": "script ref='script.js'"
-      },
-      "correct": "script src='script.js'"
+  {
+    question:
+      "What is the correct syntax for referring to an external script called 'script.js'?",
+    options: {
+      A: "script name='script.js'",
+      B: "script src='script.js'",
+      C: "script href='script.js'",
+      D: "script ref='script.js'",
     },
-    {
-      "question": "How do you write 'Hello World' in an alert box?",
-      "options": {
-        "A": "msg('Hello World');",
-        "B": "alertBox('Hello World');",
-        "C": "alert('Hello World');",
-        "D": "msgBox('Hello World');"
-      },
-      "correct": "alert('Hello World');"
+    correct: "B'",
+  },
+  {
+    question: "How do you write 'Hello World' in an alert box?",
+    options: {
+      A: "msg('Hello World');",
+      B: "alertBox('Hello World');",
+      C: "alert('Hello World');",
+      D: "msgBox('Hello World');",
     },
-    {
-      "question": "Which of the following is not a reserved word in JavaScript?",
-      "options": {
-        "A": "interface",
-        "B": "throws",
-        "C": "program",
-        "D": "short"
-      },
-      "correct": "program"
+    correct: "C",
+  },
+  {
+    question: "Which of the following is not a reserved word in JavaScript?",
+    options: {
+      A: "interface",
+      B: "throws",
+      C: "program",
+      D: "short",
     },
-    {
-      "question": "What is the correct way to write a JavaScript array?",
-      "options": {
-        "A": "var colors = (1:'red', 2:'green', 3:'blue')",
-        "B": "var colors = 'red', 'green', 'blue'",
-        "C": "var colors = ['red', 'green', 'blue']",
-        "D": "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')"
-      },
-      "correct": "var colors = ['red', 'green', 'blue']"
+    correct: "C",
+  },
+  {
+    question: "What is the correct way to write a JavaScript array?",
+    options: {
+      A: "var colors = (1:'red', 2:'green', 3:'blue')",
+      B: "var colors = 'red', 'green', 'blue'",
+      C: "var colors = ['red', 'green', 'blue']",
+      D: "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')",
     },
-    {
-      "question": "Which event occurs when the user clicks on an HTML element?",
-      "options": {
-        "A": "onchange",
-        "B": "onclick",
-        "C": "onmouseclick",
-        "D": "onmouseover"
-      },
-      "correct": "onclick"
+    correct: "C",
+  },
+  {
+    question: "Which event occurs when the user clicks on an HTML element?",
+    options: {
+      A: "onchange",
+      B: "onclick",
+      C: "onmouseclick",
+      D: "onmouseover",
     },
-    {
-      "question": "How do you declare a JavaScript variable?",
-      "options": {
-        "A": "variable carName;",
-        "B": "var carName;",
-        "C": "v carName;",
-        "D": "string carName;"
-      },
-      "correct": "var carName;"
+    correct: "B",
+  },
+  {
+    question: "How do you declare a JavaScript variable?",
+    options: {
+      A: "variable carName;",
+      B: "var carName;",
+      C: "v carName;",
+      D: "string carName;",
     },
-    {
-      "question": "What is the correct JavaScript syntax to change the content of the HTML element below?",
-      "code": "<p id='demo'>This is a demonstration.</p>",
-      "options": {
-        "A": "document.getElementById('demo').innerHTML = 'Hello World!';",
-        "B": "document.getElementByName('demo').innerHTML = 'Hello World!';",
-        "C": "document.getElementByTagName('p').innerHTML = 'Hello World!';",
-        "D": "document.getElement('p').innerHTML = 'Hello World!';"
-      },
-      "correct": "document.getElementById('demo').innerHTML = 'Hello World!';"
+    correct: "B",
+  },
+  {
+    question:
+      "What is the correct JavaScript syntax to change the content of the HTML element below?",
+    code: "<p id='demo'>This is a demonstration.</p>",
+    options: {
+      A: "document.getElementById('demo').innerHTML = 'Hello World!';",
+      B: "document.getElementByName('demo').innerHTML = 'Hello World!';",
+      C: "document.getElementByTagName('p').innerHTML = 'Hello World!';",
+      D: "document.getElement('p').innerHTML = 'Hello World!';",
     },
-    {
-      "question": "How do you create a function in JavaScript?",
-      "options": {
-        "A": "function myFunction()",
-        "B": "function:myFunction()",
-        "C": "function = myFunction()",
-        "D": "function => myFunction()"
-      },
-      "correct": "function myFunction()"
+    correct: "A",
+  },
+  {
+    question: "How do you create a function in JavaScript?",
+    options: {
+      A: "function myFunction()",
+      B: "function:myFunction()",
+      C: "function = myFunction()",
+      D: "function => myFunction()",
     },
-    {
-      "question": "How do you call a function named 'myFunction'?",
-      "options": {
-        "A": "call myFunction()",
-        "B": "call function myFunction()",
-        "C": "myFunction()",
-        "D": "Call.myFunction()"
-      },
-      "correct": "myFunction()"
+    correct: "A",
+  },
+  {
+    question: "How do you call a function named 'myFunction'?",
+    options: {
+      A: "call myFunction()",
+      B: "call function myFunction()",
+      C: "myFunction()",
+      D: "Call.myFunction()",
     },
-    {
-      "question": "How can you add a comment in JavaScript?",
-      "options": {
-        "A": "'This is a comment",
-        "B": "<!--This is a comment-->",
-        "C": "//This is a comment",
-        "D": "*This is a comment*"
-      },
-      "correct": "//This is a comment"
+    correct: "C",
+  },
+  {
+    question: "How can you add a comment in JavaScript?",
+    options: {
+      A: "'This is a comment",
+      B: "<!--This is a comment-->",
+      C: "//This is a comment",
+      D: "*This is a comment*",
     },
-    {
-      "question": "What will the following code return: Boolean(10 > 9)?",
-      "options": {
-        "A": "false",
-        "B": "true",
-        "C": "NaN",
-        "D": "undefined"
-      },
-      "correct": "true"
+    correct: "C",
+  },
+  {
+    question: "What will the following code return: Boolean(10 > 9)?",
+    options: {
+      A: "false",
+      B: "true",
+      C: "NaN",
+      D: "undefined",
     },
-    {
-      "question": "Which operator is used to assign a value to a variable?",
-      "options": {
-        "A": "*",
-        "B": "x",
-        "C": "=",
-        "D": "-"
-      },
-      "correct":  "="
+    correct: "B",
+  },
+  {
+    question: "Which operator is used to assign a value to a variable?",
+    options: {
+      A: "*",
+      B: "x",
+      C: "=",
+      D: "-",
     },
-    {
-      "question": "What is the correct JavaScript syntax to write 'Hello World'?",
-      "options": {
-        "A": "('Hello World')",
-        "B": "document.write('Hello World')",
-        "C": "response.write('Hello World')",
-        "D": "('Hello World').document.write"
-      },
-      "correct": "document.write('Hello World')"
+    correct: "C",
+  },
+  {
+    question: "What is the correct JavaScript syntax to write 'Hello World'?",
+    options: {
+      A: "('Hello World')",
+      B: "document.write('Hello World')",
+      C: "response.write('Hello World')",
+      D: "('Hello World').document.write",
     },
-    {
-      "question": "Which method can be used to find the length of a string?",
-      "options": {
-        "A": "length()",
-        "B": "getLength()",
-        "C": "strlen()",
-        "D": "length"
-      },
-      "correct": "length"
+    correct: "B",
+  },
+  {
+    question: "Which method can be used to find the length of a string?",
+    options: {
+      A: "length()",
+      B: "getLength()",
+      C: "strlen()",
+      D: "length",
     },
-    {
-      "question": "Which built-in method sorts the elements of an array?",
-      "options": {
-        "A": "changeOrder(order)",
-        "B": "order()",
-        "C": "sort()",
-        "D": "arrange()"
-      },
-      "correct": "sort()"
+    correct: "D",
+  },
+  {
+    question: "Which built-in method sorts the elements of an array?",
+    options: {
+      A: "changeOrder(order)",
+      B: "order()",
+      C: "sort()",
+      D: "arrange()",
     },
-    {
-      "question": "Which of the following is a way to create an object in JavaScript?",
-      "options": {
-        "A": "var obj = {};",
-        "B": "var obj = ();",
-        "C": "var obj = [];",
-        "D": "var obj = <>;"
-      },
-      "correct": "var obj = {};"
+    correct: "C",
+  },
+  {
+    question:
+      "Which of the following is a way to create an object in JavaScript?",
+    options: {
+      A: "var obj = {};",
+      B: "var obj = ();",
+      C: "var obj = [];",
+      D: "var obj = <>;",
     },
-    {
-      "question": "How do you round the number 7.25 to the nearest integer?",
-      "options": {
-        "A": "Math.rnd(7.25)",
-        "B": "Math.round(7.25)",
-        "C": "rnd(7.25)",
-        "D": "round(7.25)"
-      },
-      "correct":  "Math.round(7.25)"
+    correct: "A",
+  },
+  {
+    question: "How do you round the number 7.25 to the nearest integer?",
+    options: {
+      A: "Math.rnd(7.25)",
+      B: "Math.round(7.25)",
+      C: "rnd(7.25)",
+      D: "round(7.25)",
     },
-    {
-      "question": "How can you detect the client’s browser name?",
-      "options": {
-        "A": "navigator.appName",
-        "B": "browser.name",
-        "C": "client.navName",
-        "D": "window.browser"
-      },
-      "correct": "navigator.appName"
+    correct: "B",
+  },
+  {
+    question: "How can you detect the client’s browser name?",
+    options: {
+      A: "navigator.appName",
+      B: "browser.name",
+      C: "client.navName",
+      D: "window.browser",
     },
-    {
-      "question": "Which JavaScript method is used to access an HTML element by id?",
-      "options": {
-        "A": "getElementById()",
-        "B": "getElement(id)",
-        "C": "getElementByID()",
-        "D": "getIdElement()"
-      },
-      "correct": "getElementById()"
-    }
-  ];
+    correct: "A",
+  },
+  {
+    question:
+      "Which JavaScript method is used to access an HTML element by id?",
+    options: {
+      A: "getElementById()",
+      B: "getElement(id)",
+      C: "getElementByID()",
+      D: "getIdElement()",
+    },
+    correct: "A",
+  },
+];
 
-  console.log(questions);
+console.log(questions);
 
-// const ui = () =>{
+const ui = () => {
+  document.getElementById("dis1").innerHTML = "";
 
-//   questions.push(Array)
-
-//   Array.map((ele)=>{
-//     let addQue = document.createElement("h3");
-//     addQue.innerHTML = ele.addQue;
-//   })
-// }
-
-
-
-  questions.map((item)=>{
-
+  questions.map((item) => {
     let que = document.createElement("h4");
-    que.innerHTML = "Question : "+ item.question ;
-
-
-    
+    que.innerHTML = "Question : " + item.question;
 
     let optA = document.createElement("p");
-    optA.innerHTML =  item.options.A;
+    optA.innerHTML = item.options.A;
     let optB = document.createElement("p");
     optB.innerHTML = item.options.B;
     let optC = document.createElement("p");
@@ -226,234 +215,104 @@ let questions = [
     optD.innerHTML = item.options.D;
 
     let ans = item.correct;
-    // console.log(item.options.A);
-    console.log(ans);
     let b1 = document.createElement("p");
-    b1.innerHTML = "A : " + item.options.A
-    b1.addEventListener("click",()=>{
-        if(item.options.A == ans){
-            b1.style.backgroundColor = ' green'
-            b1.style.color = 'White'
-            b1.style.fontSize = "20px"
-
-            b1.style.width = "220px"
-        }
-        else{
-            b1.style.backgroundColor = ' red'
-            b1.style.color = 'White'
-            b1.style.fontSize = "20px"
-
-            b1.style.width = "220px"
-
-        }
-    })
-
+    b1.innerHTML = "A : " + item.options.A;
+    b1.addEventListener("click", () => {
+      if ("A" == ans) {
+        b1.style.backgroundColor = " green";
+        b1.style.color = "White";
+        b1.style.fontSize = "20px";
+        b1.style.width = "220px";
+      } else {
+        b1.style.backgroundColor = " red";
+        b1.style.color = "White";
+        b1.style.fontSize = "20px";
+        b1.style.width = "220px";
+      }
+    });
 
     let b2 = document.createElement("p");
-    b2.innerHTML = "B : " + item.options.B
-    b2.addEventListener("click",()=>{
-        if(item.options.B == ans){
-            b2.style.background = "green"
-            b2.style.color = 'White'
-            b2.style.fontSize = "20px"
+    b2.innerHTML = "B : " + item.options.B;
+    b2.addEventListener("click", () => {
+      if ("B" == ans) {
+        b2.style.background = "green";
+        b2.style.color = "White";
+        b2.style.fontSize = "20px";
+        b2.style.width = "220px";
+      } else {
+        b2.style.background = " red";
+        b2.style.color = "White";
+        b2.style.fontSize = "20px";
+        b2.style.width = "220px";
+      }
+    });
 
-            b2.style.width = "220px"
-        }
-        else{
-            b2.style.background = " red"
-            b2.style.color = 'White'
-            b2.style.fontSize = "20px"
-
-            b2.style.width = "220px"
-
-
-        }
-    })
-
-    
     let b3 = document.createElement("p");
-    b3.innerHTML = "C : " + item.options.C
-    b3.addEventListener("click",()=>{
-        if(item.options.C == ans){
-            b3.style.background = "green"
-            b3.style.color = 'White'
-            b3.style.fontSize = "20px"
-
-            b3.style.width = "220px"
-
-        }
-        else{
-            b3.style.background = "red"
-            b3.style.color = 'White'
-            b3.style.fontSize = "20px"
-
-            b3.style.width = "220px"
-
-        }
-    })
+    b3.innerHTML = "C : " + item.options.C;
+    b3.addEventListener("click", () => {
+      if (item.options.C == ans) {
+        b3.style.background = "green";
+        b3.style.color = "White";
+        b3.style.fontSize = "20px";
+        b3.style.width = "220px";
+      } else {
+        b3.style.background = "red";
+        b3.style.color = "White";
+        b3.style.fontSize = "20px";
+        b3.style.width = "220px";
+      }
+    });
 
     let b4 = document.createElement("p");
-    b4.innerHTML = "D : " + item.options.D
-    b4.addEventListener("click",()=>{
-        if(item.options.D == ans){
-            b4.style.background = "green"
-            b4.style.color = 'White'
-            b4.style.fontSize = "20px"
-
-            b4.style.width = "220px"
-
-        }
-        else{
-            b4.style.background = "red"
-            b4.style.color = 'White'
-            b4.style.fontSize = "20px"
-
-            b4.style.width = "220px"
-
-        }
-    })
-
-    
-
+    b4.innerHTML = "D : " + item.options.D;
+    b4.addEventListener("click", () => {
+      if (item.options.D == ans) {
+        b4.style.background = "green";
+        b4.style.color = "White";
+        b4.style.fontSize = "20px";
+        b4.style.width = "220px";
+      } else {
+        b4.style.background = "red";
+        b4.style.color = "White";
+        b4.style.fontSize = "20px";
+        b4.style.width = "220px";
+      }
+    });
 
     let divtag = document.createElement("div");
-    divtag.append(b1,b2,b3,b4);
-    divtag.setAttribute("class","divtag")
-
-    // let div3 = document.createElement("div");
-    // div3.append(addQue)
+    divtag.append(b1, b2, b3, b4);
+    divtag.setAttribute("class", "divtag");
 
     let div2 = document.createElement("div");
-    div2.append(que,divtag)
-    div2.setAttribute("id","div2")
+    div2.append(que, divtag);
+    div2.setAttribute("id", "div2");
 
-    document.getElementById("Display").append(div2)
-    // document.getElementById("Display").append(div3)
+    document.getElementById("Display").append(div2);
+  });
 
+};
 
-    
+const handle = (e) => {
+  e.preventDefault();
 
-  })
+  let data = {
+    question: document.getElementById("ques").value,
+    options: {
+      A: document.getElementById("A_option").value,
+      B: document.getElementById("B_option").value,
+      C: document.getElementById("C_option").value,
+      D: document.getElementById("D_option").value,
+    },
+    correct: document.getElementById("Correct_opt").value,
 
-  const ui = () =>{
-    document.getElementById("dis1").innerHTML = ""
+  };
+  console.log(data);
 
+ 
+  questions.push(data);
 
-    Array.map((ele)=>{
-      
-      let ans1 = ele.addCorrect
-      console.log(ans1);
+  ui();
+};
+ui();
 
-      let addQue = document.createElement("h3");
-      addQue.innerHTML = "Question : " + ele.addQue
-
-      let addA = document.createElement("p");
-      addA.innerHTML = "A : " + ele.addA
-      addA.addEventListener("click",()=>{
-        if(ele.addA == ans1){
-            addA.style.background = "green"
-            addA.style.color = 'White'
-            addA.style.fontSize = "20px"
-            addA.style.width = "220px"
-        }
-        else{
-          addA.style.background = "red"
-            addA.style.color = 'White'
-            addA.style.fontSize = "20px"
-            addA.style.width = "220px"
-        }
-      })
-
-      let addB = document.createElement("p");
-      addB.innerHTML = "B : " + ele.addB
-      addB.addEventListener("click",()=>{
-        if(ele.addB == ans1){
-          addB.style.background = "green"
-          addB.style.color = 'White'
-          addB.style.fontSize = "20px"
-          addB.style.width = "220px"
-        }
-        else{
-          addB.style.background = "red"
-          addB.style.color = 'White'
-          addB.style.fontSize = "20px"
-          addB.style.width = "220px"
-        }
-      })
-
-      let addC = document.createElement("p")
-      addC.innerHTML = "C : " + ele.addC
-      addC.addEventListener("click",()=>{
-        if(ele.addC == ans1){
-          addC.style.background = "green"
-          addC.style.color = 'White'
-          addC.style.fontSize = "20px"
-          addC.style.width = "220px"
-        }
-        else{
-          addC.style.background = "red"
-          addC.style.color = 'White'
-          addC.style.fontSize = "20px"
-          addC.style.width = "220px"
-        }
-      })
-
-      let addD = document.createElement("p")
-      addD.innerHTML = "D : " + ele.addD
-      addD.addEventListener("click",()=>{
-        if(ele.addD == ans1){
-          addD.style.background = "green"
-          addD.style.color = 'White'
-          addD.style.fontSize = "20px"
-          addD.style.width = "220px"
-        }
-        else{
-          addD.style.background = "red"
-          addD.style.color = 'White'
-          addD.style.fontSize = "20px"
-          addD.style.width = "220px"
-        }
-      })
-
-
-
-
-      let div = document.createElement("div")
-      div.append(addQue,addA,addB,addC,addD)
-      div.setAttribute("class","ui_div")
-
-    document.getElementById("dis1").append(div)
-
-  
-    })
-    // document.getElementById("dis1").innerHTML = ""
-  
-
-  }
-
-  
-const handle = (e) =>{
-    e.preventDefault();
-
-    let data = {
-         addQue : document.getElementById("ques").value,
-
-         
-          addA : document.getElementById("A_option").value,
-          addB : document.getElementById("B_option").value,
-          addC : document.getElementById("C_option").value,
-          addD : document.getElementById("D_option").value,
-          addCorrect : document.getElementById("Correct_opt").value
-       
-
-        
-    }
-    console.log(data);
-
-    Array.push(data);
-    // console.log(questions);
-    ui();
-}
-
-
-  document.getElementById("Form").addEventListener("submit",handle)
+document.getElementById("Form").addEventListener("submit", handle);
