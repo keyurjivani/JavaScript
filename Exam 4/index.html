@@ -4,8 +4,349 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exam4</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  row-gap: 20px;
+  margin: 0px 30px;
+}
+
+#products div img {
+  width: 250px;
+  height: 300px;
+  display: block;
+}
+
+#products .box,
+.imgDiv,
+.titleDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#products .box {
+  height: 600px;
+  width: 270px;
+  border: 1px solid black;
+}
+
+#products div p {
+  display: block;
+  font-size: larger;
+  font-weight: 500;
+  margin: 7%;
+}
+
+.titleDiv {
+  height: 170px;
+}
+
+.titleDiv button {
+  height: 30px;
+  width: 120px;
+  background: rgb(228, 228, 228);
+  border: 1px solid black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+  margin: 3% auto;
+  padding: 2%;
+  border: 1px solid;
+  width: 280px;
+  height: 300px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+    width: 100%;
+  }
+  button {
+    margin: 2%;
+    height: 40px;
+    width: 110px;
+    font-size: large;
+    font-weight: 600;
+  }
+}
+
+#account {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: large;
+  font-weight: 600;
+  margin: 3% auto;
+  padding: 2%;
+  p {
+    width: 100%;
+    word-spacing: 5px;
+    margin: 2%;
+  }
+  button {
+    margin: 2%;
+    height: 50px;
+    width: 180px;
+    font-size: large;
+    font-weight: 600;
+  }
+  .deposit {
+    width: 100%;
+  }
+  input {
+    height: 30px;
+    width: 300px;
+    margin:6%;
+}
+}
+    </style>
 </head>
 <body>
-    
+    <form>
+      <div>
+        <label>Name : </label>
+        <input type="text" placeholder="Enter Name" id="name" required />
+      </div>
+      <div>
+        <label>Email : </label>
+        <input type="email" placeholder="Enter email" id="email" required />
+      </div>
+      <div>
+        <label>Age : </label>
+        <input type="number" placeholder="Enter Age" id="age" required />
+      </div>
+      <div>
+        <label>Number : </label>
+        <input type="number" placeholder="Enter Number" id="number" required />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="account"></div>
+    <div id="products"></div>
+
 </body>
+<script>
+    let data = [
+    {
+      id: 1,
+      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      price: 109.95,
+      description:
+        "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      category: "men's clothing",
+      image: "https://fakestoreapi.com/img/81fPKd-2AYL.AC_SL1500.jpg",
+      rating: {
+        rate: 3.9,
+        count: 120,
+      },
+    },
+    {
+      id: 2,
+      title: "Mens Casual Premium Slim Fit T-Shirts ",
+      price: 22.3,
+      description:
+        "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+      category: "men's clothing",
+      image:
+        "https://fakestoreapi.com/img/71-3HjGNDUL.AC_SY879._SX._UX._SY._UY.jpg",
+      rating: {
+        rate: 4.1,
+        count: 259,
+      },
+    },
+    {
+      id: 3,
+      title: "Mens Cotton Jacket",
+      price: 55.99,
+      description:
+        "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+      category: "men's clothing",
+      image: "https://fakestoreapi.com/img/71li-ujtlUL.AC_UX679.jpg",
+      rating: {
+        rate: 4.7,
+        count: 500,
+      },
+    },
+    {
+      id: 4,
+      title: "Mens Casual Slim Fit",
+      price: 15.99,
+      description:
+        "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      category: "men's clothing",
+      image: "https://fakestoreapi.com/img/71YXzeOuslL.AC_UY879.jpg",
+      rating: {
+        rate: 2.1,
+        count: 430,
+      },
+    },
+  ];
+  
+  const Print_Data = (name, email, number, age) => {
+    const account = new Bank(name, email, number, age);
+    account.print();
+  
+    deposit.addEventListener("click", () => {
+      const amount = Number(document.getElementById("Amtval").value);
+      account.Deposit(amount);
+    });
+  
+    data.map((elem) => {
+      let title = document.createElement("h4");
+      title.innerHTML = `${elem.title} `;
+  
+      let img = document.createElement("img");
+      img.src = elem.image;
+  
+      let price = document.createElement("p");
+      price.innerHTML = `${elem.price}`;
+  
+      let button = document.createElement("button");
+      button.setAttribute("class", "btn");
+      button.innerHTML = ` BUY NOW `;
+  
+      let imgDiv = document.createElement("div");
+      imgDiv.setAttribute("class", "imgDiv");
+      imgDiv.append(img);
+  
+      let titleDiv = document.createElement("div");
+      titleDiv.setAttribute("class", "titleDiv");
+      titleDiv.append(title, price, button);
+  
+      let div = document.createElement("div");
+      div.setAttribute("class", "box");
+      div.append(imgDiv, titleDiv);
+  
+      document.getElementById("products").append(div);
+  
+      button.addEventListener("click", () => {
+        console.log(account);
+        account.Withdraw(parseFloat(elem.price));
+      });
+    });
+  };
+  
+  class Bank {
+    #name;
+    #balance;
+    #email;
+    #number;
+    #age;
+    constructor(name, email, number, age, balance = 0) {
+      this.#name = name;
+      this.#balance = balance;
+      this.#email = email;
+      this.#number = number;
+      this.#age = age;
+    }
+  
+    print() {
+      nameTag.innerHTML =` Name : ${this.#name}`;
+      emailTag.innerHTML = `Email : ${this.#email}`;
+      balanceTag.innerHTML = `Balance : ${this.#balance}`;
+      numberTag.innerHTML = `Number : ${this.#number}`;
+      ageTag.innerHTML = `Age : ${this.#age}`;
+      btn.innerHTML = Check_Balance;
+      btn.setAttribute("id", "checkAmt");
+      deposit.innerHTML = Deposit_Amount;
+      deposit.setAttribute("id", "dptAmt");
+      input.setAttribute("id", "Amtval");
+  
+      input.placeholder = `Enter Deposit Amount`;
+  
+      let depositDiv = document.createElement("div");
+      depositDiv.setAttribute("class", "deposit");
+      depositDiv.append(input, deposit);
+  
+      account.append(
+        nameTag,
+        ageTag,
+        numberTag,
+        emailTag,
+        balanceTag,
+        input,
+        deposit,
+        btn
+      );
+  
+      account.style.border = "1px solid";
+      account.style.height = "500px";
+      account.style.width = "500px";
+    }
+  
+    check_Balance() {
+      balanceTag.innerHTML = `Balance : ${this.#balance}`;
+    }
+  
+    Withdraw(price) {
+      const flag = this.#balance > price ? true : false;
+  
+      if (flag) {
+        this.#balance -= price;
+        balanceTag.innerHTML = `Balance : ${this.#balance}`;
+      } else {
+        alert("You don't have enough balance");
+      }
+  
+      console.log(flag);
+    }
+  
+    Deposit(price) {
+      if (price < 1 || price == "") {
+        alert("You don't have enough money to deposit");
+      } else {
+        this.#balance += price;
+      }
+      balanceTag.innerHTML = `Balance : ${this.#balance}`;
+    }
+  }
+  
+  const make_Account = (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const number = document.getElementById("number").value;
+    const age = document.getElementById("age").value;
+  
+    const flag = age > 15 && age < 60 ? true : false;
+    if (flag) {
+      form.reset();
+      Print_Data(name, email, number, age);
+    } else {
+      alert("You are not eligible to open an account");
+    }
+  };
+  
+  const form = document.querySelector("form");
+  const account = document.querySelector("#account");
+  const nameTag = document.createElement("p");
+  const emailTag = document.createElement("p");
+  const balanceTag = document.createElement("p");
+  const numberTag = document.createElement("p");
+  const ageTag = document.createElement("p");
+  const btn = document.createElement("button");
+  const input = document.createElement("input");
+  const deposit = document.createElement("button");
+  
+  form.addEventListener("submit",make_Account);
+</script>
 </html>
