@@ -1,29 +1,27 @@
-let count = 0 ;
-const btn = () =>{
-count++
-document.getElementById("h2").innerText = count;
-}
-document.getElementById("btn").addEventListener("click",btn)
+let c1, c2, c3, c4;
+let count = 0;
+const counter = (count, s_id, key) => {
+  count++;
+  document.getElementById(s_id).innerText = count;
 
+  if (key == "key4") {
+    sessionStorage.setItem(key, count);
+  } else {
+    localStorage.setItem(key, count);
+  }
+};
 
-let count1 = 0 ;
-const btn1 = () =>{
-count1++
-document.getElementById("h3").innerText = count1;
-}
-document.getElementById("btn1").addEventListener("click",btn1)
-
-let count2 = 0 ;
-const btn2 = () =>{
-count2++
-document.getElementById("h4").innerText = count2;
-}
-document.getElementById("btn2").addEventListener("click",btn2)
-
-
-let count3 = 0 ;
-const btn3 = () =>{
-count3++
-document.getElementById("h5").innerText = count3;
-}
-document.getElementById("btn3").addEventListener("click",btn3)
+const click = (c_id, c, s_id, key) => {
+  document.getElementById(c_id).addEventListener("click", () => {
+    if (key == "key4") {
+      c = sessionStorage.getItem(key) || 0;
+    } else {
+      c = localStorage.getItem(key) || 0;
+    }
+    counter(c, s_id, key);
+  });
+};
+click("btn", c1, "h2", "key1");
+click("btn1", c2, "h21", "key2");
+click("btn2", c3, "h22", "key3");
+click("btn3", c4, "h23", "key4");
