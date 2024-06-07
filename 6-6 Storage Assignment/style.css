@@ -24,8 +24,8 @@ img {
   align-items: center;
   position: absolute;
   z-index: 1;
-  left: 690px;
-  top: 385px;
+  left: 120px;
+  top: 370px;
   border-radius: 50%;
   font-size: 15px;
   color: white;
@@ -42,8 +42,8 @@ img {
   align-items: center;
   position: absolute;
   z-index: 1;
-  left: 740px;
-  top: 385px;
+  left: 170px;
+  top: 370px;
   border-radius: 50%;
   font-size: 15px;
 }
@@ -58,8 +58,8 @@ img {
   align-items: center;
   position: absolute;
   z-index: 1;
-  left: 790px;
-  top: 385px;
+  left: 220px;
+  top: 370px;
   border-radius: 50%;
   font-size: 15px;
 }
@@ -74,8 +74,8 @@ img {
   align-items: center;
   position: absolute;
   z-index: 1;
-  left: 840px;
-  top: 385px;
+  left: 270px;
+  top: 370px;
   border-radius: 50%;
   font-size: 15px;
 }
@@ -88,43 +88,43 @@ img {
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 670px;
-  top: 400px;
+  left: 100px;
+  top: 385px;
 }
 
 #btn1 {
   background: #000;
   position: absolute;
-  top: 400px;
+  top: 385px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   display: flex;
-  left: 720px;
+  left: 150px;
   justify-content: center;
   align-items: center;
 }
 #btn2 {
   background: #000;
   position: absolute;
-  top: 400px;
+  top: 385px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   display: flex;
-  left: 770px;
+  left: 200px;
   justify-content: center;
   align-items: center;
 }
 #btn3 {
   background: #000;
   position: absolute;
-  top: 400px;
-  width: 40px;
+  top: 385px;
+  width: 45px;
   height: 40px;
   border-radius: 50%;
   display: flex;
-  left: 820px;
+  left: 250px;
   justify-content: center;
   align-items: center;
 }
