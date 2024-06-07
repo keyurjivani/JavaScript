@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 #main {
   margin: 20px;
   border: 2px solid rgb(255, 255, 255);
@@ -5,6 +10,7 @@
   border-radius: 10px;
   width: max-content;
 }
+
 img {
   border-radius: 10px 10px 0px 0px;
 }
@@ -124,9 +130,26 @@ img {
 }
 .fa-regular,
 .fa-solid {
-  font-size: 25px;
+  font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+#heart:hover{
+  color: rgb(228, 128, 128);
+}
+
+#comment:hover{
+color: rgb(153, 153, 221);
+}
+#user:hover{
+color: rgb(106, 150, 74);
+}
+#user{
+  font-size: 22px ;
+}
+#share:hover{
+  color: rgb(3, 115, 115);
 }
