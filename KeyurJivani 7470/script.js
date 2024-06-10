@@ -246,7 +246,6 @@ const ui = () => {
         b2.style.width = "220px";
       }
     });
-
     let b3 = document.createElement("p");
     b3.innerHTML = "C : " + item.options.C;
     b3.addEventListener("click", () => {
@@ -262,7 +261,6 @@ const ui = () => {
         b3.style.width = "220px";
       }
     });
-
     let b4 = document.createElement("p");
     b4.innerHTML = "D : " + item.options.D;
     b4.addEventListener("click", () => {
@@ -289,12 +287,9 @@ const ui = () => {
 
     document.getElementById("Display").append(div2);
   });
-
 };
-
 const handle = (e) => {
   e.preventDefault();
-
   let data = {
     question: document.getElementById("ques").value,
     options: {
@@ -304,15 +299,10 @@ const handle = (e) => {
       D: document.getElementById("D_option").value,
     },
     correct: document.getElementById("Correct_opt").value,
-
   };
   console.log(data);
-
- 
   questions.push(data);
-
   ui();
 };
 ui();
-
 document.getElementById("Form").addEventListener("submit", handle);
