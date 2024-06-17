@@ -1,0 +1,30 @@
+*{
+    margin: 0;padding: 0;
+}
+
+body{
+    background-image:url("https://c8.alamy.com/comp/HPNB0G/geometric-shape-hand-drawn-sketch-seamless-background-abstract-pattern-HPNB0G.jpg") ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+#Collect_Products{
+    border: 1px solid black;
+    padding: 8px;
+    width: 500px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+}
+
+#Add_Products{
+    height: 610px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
