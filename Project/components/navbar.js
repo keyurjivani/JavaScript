@@ -3,7 +3,7 @@ const navbar = (login = " login", Signup = "signup") => {
     <div class="container-fluid ">
       <a class="navbar-brand text-white " href="../index.html"><img src="../components/1.png" alt="" width="70px" height="50px">  </a>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler  bg-light"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -11,7 +11,7 @@ const navbar = (login = " login", Signup = "signup") => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon "></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -35,24 +35,13 @@ const navbar = (login = " login", Signup = "signup") => {
             <a class="nav-link text-white fs-5" href="../html/Cart.html">Cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="../html/Login.html">${login}</a>
+            <a class="nav-link text-white fs-5" id ="login" href="../html/Login.html">${login}</a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link text-white fs-5" href="../html/SignUp.html">${Signup}</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">
-            Search
-          </button>
-        </form>
       </div>
     </div>
   </nav>`

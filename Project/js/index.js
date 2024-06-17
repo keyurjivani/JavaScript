@@ -14,7 +14,12 @@ if(isLogin){
 
 
 
+document.getElementById("login").addEventListener("click",(e)=>{
+    e.preventDefault();
+    localStorage.removeItem("isLogin",false);
+    window.location.href = "http://127.0.0.1:3000/html/Login.html"
 
+})
 
 
 
