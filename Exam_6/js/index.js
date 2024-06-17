@@ -1,6 +1,6 @@
-import navbar from "../componen/navbar.js";
+// import navbar from "../componen/navbar.js";
 import getValue from "../componen/helper.js";
-document.getElementById("navbar").innerHTML = navbar()
+// document.getElementById("navbar").innerHTML = navbar()
 
 
 let array = JSON.parse(localStorage.getItem('array')) || []
