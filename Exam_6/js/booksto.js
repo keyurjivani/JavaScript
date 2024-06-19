@@ -1,31 +1,29 @@
-// import navbar from "../componen/navbar.js";
+import navbar from "../componen/navbar.js";
 import { craeteTag } from "../componen/helper.js";
 
-// document.getElementById("navbar").innerHTML = navbar();
+document.getElementById("navbar").innerHTML = navbar();
 
 let buyBook = JSON.parse(localStorage.getItem("buyBook")) || [];
 console.log("buy",buyBook);
 
-let array = JSON.parse(localStorage.getItem("array")) || [];
-console.log("array",array);
+let book_list = JSON.parse(localStorage.getItem("book_list")) || [];
+console.log("book_list",book_list);
 
-
-
-
-
+let bookmark_list = JSON.parse(localStorage.getItem("bookmark_list")) || [];
+console.log("book_list",bookmark_list);
 
 
 
 const BuyFun = (index) => {
-  let array = JSON.parse(localStorage.getItem("array")) || [];
+  let book_list = JSON.parse(localStorage.getItem("book_list")) || [];
   // let buyBook = JSON.parse(localStorage.getItem('array')) || []
 
-//   buyBook.push(array[index]);
+  buyBook.push(book_list[index]);
   alert("Book Deliver on 2 - 3 Working Day. Thank You... ")
-  array.splice(index, 1);
+  book_list.splice(index, 1);
 
   localStorage.setItem("buyBook", JSON.stringify(buyBook));
-  localStorage.setItem("array",JSON.stringify(array))
+  localStorage.setItem("book_list",JSON.stringify(book_list))
 
   location.reload();
 };
@@ -42,7 +40,7 @@ const BuyFun = (index) => {
 
 const Counter = () => {
   let Count = 0;
-  array.map(() => {
+  book_list.map(() => {
     Count++;
   });
 
@@ -54,23 +52,23 @@ const Counter = () => {
 
 
 const BookMarksFun = (index) =>{
-    let array = JSON.parse(localStorage.getItem("array")) || [];
+    let book_list = JSON.parse(localStorage.getItem("book_list")) || [];
     // let buyBook = JSON.parse(localStorage.getItem('array')) || []
   
-    buyBook.push(array[index]);
+    bookmark_list.push(book_list[index]);
     alert("Your Select Book Is Bookmarks. Show In Bookmark Session. Thank You.....")
-    array.splice(index, 1);
+    book_list.splice(index, 1);
   
-    localStorage.setItem("buyBook", JSON.stringify(buyBook));
-    localStorage.setItem("array",JSON.stringify(array))
+    localStorage.setItem("bookmark_list", JSON.stringify(bookmark_list));
+    localStorage.setItem("book_list",JSON.stringify(book_list))
   
     location.reload();
 }
 
-const Ui = () => {
+const Ui = (book_list) => {
   document.getElementById("tbody").innerHTML = "";
 
-  array.map((ele, index) => {
+  book_list.map((ele, index) => {
     let tr = document.createElement("tr");
     let td1 = craeteTag("td", ele.bookName);
     let td2 = craeteTag("td", ele.authorName);
@@ -105,4 +103,4 @@ const Ui = () => {
     Counter();
   });
 };
-Ui(array);
+Ui(book_list);

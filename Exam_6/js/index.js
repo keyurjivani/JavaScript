@@ -1,9 +1,9 @@
-// import navbar from "../componen/navbar.js";
+import navbar from "../componen/navbar.js";
 import getValue from "../componen/helper.js";
-// document.getElementById("navbar").innerHTML = navbar()
+document.getElementById("navbar").innerHTML = navbar()
 
 
-let array = JSON.parse(localStorage.getItem('array')) || []
+let book_list = JSON.parse(localStorage.getItem('book_list')) || []
 const handle = (e) =>{
     e.preventDefault();
 
@@ -18,9 +18,9 @@ const handle = (e) =>{
     }
 
     // console.log(Data);
-    array.push(Data);
+    book_list.push(Data);
 
-    localStorage.setItem("array",JSON.stringify(array))
+    localStorage.setItem("book_list",JSON.stringify(book_list))
 }
 
 
