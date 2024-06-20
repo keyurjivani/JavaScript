@@ -19,7 +19,7 @@ const handle = (e) =>{
 
     // console.log(Data);
     book_list.push(Data);
-
+    alert("Book Is Add In Dashboard Site.")
     localStorage.setItem("book_list",JSON.stringify(book_list))
 }
 

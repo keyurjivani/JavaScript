@@ -42,6 +42,10 @@ const navbar = (login = " login", Signup = "signup") => {
             <a class="nav-link text-white fs-5" href="../html/SignUp.html">${Signup}</a>
           </li>
         </ul>
+        <form class="d-flex" role="search" id ="Search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id ="Searching">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
       </div>
     </div>
   </nav>`
