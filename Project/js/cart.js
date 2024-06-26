@@ -4,10 +4,6 @@ import { MakeUi } from "../components/helper.js";
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 console.log(cart);
 
-
-
-
-
 const handleQty = (index, opr) => {
   if (opr == "+") {
     cart[index].qty += 1;
@@ -22,61 +18,47 @@ const handleQty = (index, opr) => {
   localStorage.setItem("cart", JSON.stringify(cart));
 };
 
-
-
-
-
 const handleDelete = (index) => {
   cart.splice(index, 1);
   ui(cart);
   localStorage.setItem("cart", JSON.stringify(cart));
 };
 
-
-
-
 //total price
-const countprice = () =>{
-    let countp = 0;
-    document.getElementById("bill").innerHTML = ""
-    cart.map((ele)=>{
-        countp = Number(countp) + Number(ele.Pro_Price * ele.qty)
-        
-        document.getElementById("bill").innerHTML = `total : ${countp}`
-    })
-    handleDiscount(countp)
-}
-
-const handleDiscount = (countp) =>{
-   let a = countp
-    
-}
-
-
-
-
-const billUI = (td2, td6) => {
-  document.getElementById("bill").innerText = "";
-  cart.map((item, i) => {
-    let td2 = MakeUi("td", item.Pro_Title);
- 
-    let td6 = MakeUi("td", item.Pro_Price * item.qty);
-
+const countprice = (total) => {
+  console.log("total", total);
+  document.getElementById("bill").innerHTML = `total : ${total}`;
   
-    document.getElementById("bill").append(td2, td6);
-
-  });
+  handleDiscount(total);
 };
 
+const handleDiscount = (countp) => {
+  let discount = countp * 0.1;
+  //  console.log(discount);
+
+  let total_Discount = countp - discount;
+  console.log(total_Discount, discount);
+ let dis=MakeUi("p",discount)
+
+ document.getElementById("bill").append(dis)
 
 
+ };
 
-
+const billUI = (td2, td6) => {
+  // document.getElementById("bill").innerText = "";
+  // cart.map((item, i) => {
+  //   let td2 = MakeUi("td", item.Pro_Title);
+  //   let td6 = MakeUi("td", item.Pro_Price * item.qty);
+  //   document.getElementById("bill").append(td2, td6);
+  // });
+};
 
 const ui = (cart) => {
   document.getElementById("list").innerHTML = "";
-
+  let total = 0;
   cart.map((item, i) => {
+    total += item.Pro_Price * item.qty;
     let td1 = document.createElement("td");
     let img = MakeUi("img", item.Pro_url);
 
@@ -106,9 +88,8 @@ const ui = (cart) => {
     document.getElementById("list").append(tr);
 
     billUI(td2, td6);
-    countprice()
-   
   });
+  countprice(total);
 };
 
 ui(cart);

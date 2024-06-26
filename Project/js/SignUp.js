@@ -1,32 +1,27 @@
 import getId from "../components/helper.js";
 
 import navbar from "../components/navbar.js";
-
-document.getElementById("navbar").innerHTML = navbar()
+document.getElementById("navbar").innerHTML = navbar();
 
 const handle = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    let User  = {
-        Name : getId("Name"),
-        email : getId("email"),
-        password : getId("password"),
-        CuurentPass : getId("CuurentPass")
+  let User = {
+    Name: getId("Name"),
+    email: getId("email"),
+    password: getId("password"),
+    CuurentPass: getId("CuurentPass"),
+  };
 
-    }
+     
+    alert("Your SignUp Succeessful");
+    console.log(User);
+    localStorage.setItem("User", JSON.stringify(User));
+    localStorage.setItem("Islogin", true);
+    document.getElementById("navbar").innerHTML = navbar("logout",User.Name);
+    window.location.href = "http://127.0.0.1:3000/Project/index.html";
 
-    if(User.CuurentPass == User.password){
-        alert("Your SignUp Succeessful");
-        console.log(User);
-        localStorage.setItem("User",JSON.stringify(User))
-        localStorage.setItem("Islogin",true)
-        window.location.href = "http://127.0.0.1:3000/Project/index.html"
-    }else{
-        alert("Please Enter Current PassWord")
-    }
 
-    
 }
 
-
-document.getElementById("Form").addEventListener("submit",handle)
+document.getElementById("Form").addEventListener("submit", handle);
