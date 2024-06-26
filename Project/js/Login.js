@@ -10,8 +10,8 @@ const handleData = (e) => {
   e.preventDefault();
 
   let user = {
-    email: getId("email"),
-    password: getId("password"),
+    email: document.getElementById("email").value,
+    password: document.getElementById("password").value,
   };
 
   console.log(user);
@@ -24,13 +24,9 @@ const handleData = (e) => {
     } else {
       alert("login success: " + user.username);
       localStorage.setItem("isLogin", true);
-    window.location.href = "http://127.0.0.1:3000/Project/index.html";
-
     }
   } else {
     alert("please sign up ");
-
-    window.location.href = "http://127.0.0.1:3000/html/SignUp.html";
   }
 };
 
