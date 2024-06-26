@@ -1,9 +1,9 @@
 const navbar = (login = " login", Signup = "signup") => {
-    return `<nav class="navbar navbar-expand-lg bg-black text-white">
-    <div class="container-fluid ">
-      <a class="navbar-brand text-white " href="../index.html"><img src="../components/1.png" alt="" width="70px" height="50px">  </a>
+    return `<nav class="navbar navbar-expand-lg bg-body-tertiary bg-black">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/Project/index.html"><img src="/Project/components/1.png" alt="" width="50px" height="50px"> </a>
       <button
-        class="navbar-toggler  bg-light"
+        class="navbar-toggler text-light"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -11,41 +11,48 @@ const navbar = (login = " login", Signup = "signup") => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon "></span>
+        <span class="navbar-toggler-icon bg-danger"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a
-              class="nav-link active text-white fs-5"
+              class="nav-link active"
               aria-current="page"
-              href="../index.html"
+              href="/Project/index.html"
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="../html/Products.html">Products</a>
+            <a class="nav-link" href="../html/Products.html">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="../html/AddProducts.html"
+            <a class="nav-link" href="../html/AddProducts.html"
               >Add Product</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="../html/Cart.html">Cart</a>
+            <a class="nav-link" href="/Project/html/Cart.html">Cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fs-5" id ="login" href="../html/Login.html">${login}</a>
+            <a class="nav-link" href="/Project/html/Login.html">${login}</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="../html/SignUp.html">${Signup}</a>
+            <a class="nav-link" href="/Project/html/SignUp.html">${Signup}</a>
           </li>
         </ul>
-        <form class="d-flex" role="search" id ="Search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id ="Searching">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+        <form class="d-flex" role="search" id = "Search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search" id = "Searching"
+          />
+          <button class="btn btn-outline-light" type="submit">
+            Search
+          </button>
+        </form>
       </div>
     </div>
   </nav>`

@@ -4,6 +4,30 @@ import navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML = navbar()
 
 let array = JSON.parse(localStorage.getItem('array')) || [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+console.log(cart);
+
+
+const isExists = (id) =>{
+    let temp = cart.filter((ele)=> ele.id==id)
+    return temp.length > 0 ? true : false;
+}
+
+const handleCart = (ele) =>{
+    if(isExists(ele.id)){
+        cart.map((item,index)=>{
+            if(item.id == ele.id){
+                cart[index].qty += 1;
+
+            }
+        })
+        alert("ok")
+    }else{
+        cart.push({...ele, qty : 1})
+        alert("add to cart")
+    }
+    localStorage.setItem("cart",JSON.stringify(cart))
+}
 
 // Show Products
 const UiMake = (array) =>{
@@ -14,9 +38,11 @@ const UiMake = (array) =>{
         let Pro_Title = MakeUi("h4",item.Pro_Title);
         let Pro_Price = MakeUi("h4",item.Pro_Price)
         let Pro_Category = MakeUi("p",item.Pro_Category)
-        
+        let btn = document.createElement("button");
+        btn.innerHTML = "buy"
+        btn.addEventListener("click",()=>handleCart(item))
         let div = document.createElement("div");
-        div.append(Pro_url,Pro_Title,Pro_Price,Pro_Category)
+        div.append(Pro_url,Pro_Title,Pro_Price,Pro_Category,btn)
 
         document.getElementById("display").append(div)
     })
