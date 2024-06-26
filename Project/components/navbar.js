@@ -24,10 +24,10 @@ const navbar = (login = " login", Signup = "signup") => {
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../html/Products.html">Products</a>
+            <a class="nav-link" href="/Project/html/Products.html">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../html/AddProducts.html"
+            <a class="nav-link" href="/Project/html/AddProducts.html"
               >Add Product</a
             >
           </li>
@@ -42,12 +42,13 @@ const navbar = (login = " login", Signup = "signup") => {
             <a class="nav-link" href="/Project/html/SignUp.html">${Signup}</a>
           </li>
         </ul>
-        <form class="d-flex" role="search" id = "Search">
+        <form class="d-flex" role="search" id="search">
           <input
             class="form-control me-2"
             type="search"
             placeholder="Search"
-            aria-label="Search" id = "Searching"
+            aria-label="Search"
+            id = "Searching"
           />
           <button class="btn btn-outline-light" type="submit">
             Search

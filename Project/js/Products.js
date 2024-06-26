@@ -81,6 +81,9 @@ const handleKeyPress = (e) =>{
     // console.log(Searching);
     handleSearchValue(Searching)
     }
+    // else{
+    //     alert("Not Available Products")
+    // }
 }
 
 
@@ -92,7 +95,7 @@ const handleLiveSerach = () =>{
    
 }
 
-document.getElementById("Search").addEventListener("submit",handleSearchData)
+document.getElementById("search").addEventListener("submit",handleSearchData)
 document.getElementById("Searching").addEventListener("keypress",handleKeyPress)
 document.getElementById("Searching").addEventListener("keypress",handleLiveSerach)
 

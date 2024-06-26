@@ -20,7 +20,7 @@ const handle = (e) => {
         console.log(User);
         localStorage.setItem("User",JSON.stringify(User))
         localStorage.setItem("Islogin",true)
-        window.location.href = "http://127.0.0.1:3000/index.html"
+        window.location.href = "http://127.0.0.1:3000/Project/index.html"
     }else{
         alert("Please Enter Current PassWord")
     }
