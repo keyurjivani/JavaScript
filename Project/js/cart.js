@@ -59,7 +59,7 @@ const handleDiscount = (countp) => {
   }else{
     alert("Your Products Deliver In 2 & 3 Working Day.....");
     localStorage.removeItem("cart");
-    location.reload()
+    // location.reload()
   }
 
   
