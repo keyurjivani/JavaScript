@@ -54,10 +54,14 @@ const handleDiscount = (countp) => {
  document.getElementById("bill2").innerHTML = `Total Bill: ${total_Discount}`
 
  document.getElementById("Cheack_Out").addEventListener("click",()=>{
-  alert("Your Products Deliver In 2 & 3 Working Day.....");
+  if (cart == "") {
+    alert("Please Choice Product")
+  }else{
+    alert("Your Products Deliver In 2 & 3 Working Day.....");
+    localStorage.removeItem("cart");
+    location.reload()
+  }
 
-  localStorage.removeItem("cart");
-  location.reload()
   
 
  })
@@ -101,7 +105,14 @@ const ui = (cart) => {
     td5.append(btn1, btn2, btn3);
     let td6 = MakeUi("td", item.Pro_Price * item.qty);
     let td7 = document.createElement("td");
-    let btn = MakeUi("button", "remove");
+    let btn = MakeUi("button", "Remove");
+    btn.setAttribute("id","remove")
+    btn.style.boder = "1px solid black"
+    btn.style.color = "White"
+    btn.style.fontweight = "700"
+    
+
+
     btn.addEventListener("click", () => handleDelete(i));
     td7.append(btn);
     let tr = document.createElement("tr");
