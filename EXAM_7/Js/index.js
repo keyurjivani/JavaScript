@@ -43,6 +43,7 @@ const handleSearch = (value) => {
 }
 
 const handleKeypress = (e) => {
+    e.preventDefault()
     //  enter keypress
     //    if(e.key=="Enter") {
     if(e.key == "Enter"){

@@ -1,8 +1,17 @@
 import getId from "../components/helper.js";
 import navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML = navbar();
+let isLogin = localStorage.getItem("Islogin") || false ;
+let userData = JSON.parse(localStorage.getItem("User")) || [];
+console.log("userData",userData);
+if(isLogin){
+    document.getElementById("navbar").innerHTML = navbar("logout",userData.Name)
+}else{
+    window.location.href = "/Project/html/Login.html"
+}
 
-let userData = JSON.parse(localStorage.getItem("User"));
+
+// let userData = JSON.parse(localStorage.getItem("User"));
 
 console.log(userData);
 
@@ -10,8 +19,8 @@ const handleData = (e) => {
   e.preventDefault();
 
   let user = {
-    email: document.getElementById("email").value,
-    password: document.getElementById("password").value,
+    email: getId("email"),
+    password: getId("password"),
   };
 
   console.log(user);
@@ -24,9 +33,11 @@ const handleData = (e) => {
     } else {
       alert("login success: " + user.username);
       localStorage.setItem("isLogin", true);
+      window.location.href = "/JavaScript/Project/index.html"
     }
   } else {
     alert("please sign up ");
+    window.location.href = "/JavaScript/Project/index.html"
   }
 };
 

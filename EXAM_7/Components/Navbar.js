@@ -20,8 +20,9 @@ const Navbar = () =>{
             <a class="nav-link" href="/JavaScript/EXAM_7/Pages/SignUp.html">SignUp</a>
           </li>
         </ul>
-        <form class="d-flex" id = "search">
-          <input class="form-control me-2" id ="searchValue" placeholder="Search" >
+        
+        <form class="d-flex" role="search" id="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchValue">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>

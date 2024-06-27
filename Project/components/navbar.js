@@ -1,7 +1,7 @@
 const navbar = (login = " login", Signup = "signup") => {
     return `<nav class="navbar navbar-expand-lg  bg-black">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/Project/index.html"><img src="/Project/components/1.png" alt="" width="50px" height="50px"> </a>
+      <a class="navbar-brand text-light" href="/JavaScript/Project/index.html"><img src="/JavaScript/Project/components/1.png" alt="" width="50px" height="50px"> </a>
       <button
         class="navbar-toggler text-light"
         type="button"
@@ -17,39 +17,39 @@ const navbar = (login = " login", Signup = "signup") => {
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a
-              class="nav-link active  text-light fs-5"
+              class="nav-link active text-light fs-5"
               aria-current="page"
-              href="/Project/index.html"
+              href="/JavaScript/Project/index.html"
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fs-5" href="/Project/html/Products.html">Products</a>
+            <a class="nav-link text-light fs-5" href="/JavaScript/Project/html/Products.html">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fs-5" href="/Project/html/AddProducts.html"
+            <a class="nav-link text-light fs-5" href="/JavaScript/Project/html/AddProducts.html"
               >Add Product</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fs-5" href="/Project/html/Cart.html">Cart</a>
+            <a class="nav-link text-light fs-5" href="/JavaScript/Project/html/Cart.html">Cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fs-5" href="/Project/html/Login.html">${login}</a>
+            <a class="nav-link text-light fs-5" href="/JavaScript/Project/html/Login.html">${login}</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text-light fs-5" href="/Project/html/SignUp.html">${Signup}</a>
+            <a class="nav-link text-light fs-5" href="/JavaScript/Project/html/SignUp.html">${Signup}</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex text-light fs-5" role="search" id="search">
           <input
-            class="form-control me-2"
+            class="form-control me-2 text-light fs-5"
             type="search"
             placeholder="Search"
-            aria-label="Search"
+            aria-label="Search" id="Searching"
           />
-          <button class="btn btn-outline-light" type="submit">
+          <button class="btn btn-outline-light text-light fs-5" type="submit">
             Search
           </button>
         </form>

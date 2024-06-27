@@ -4,6 +4,16 @@ import { MakeUi } from "../components/helper.js";
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 console.log(cart);
 
+let isLogin = localStorage.getItem("Islogin") || false ;
+let userData = JSON.parse(localStorage.getItem("User")) || [];
+console.log("userData",userData);
+if(isLogin){
+    document.getElementById("navbar").innerHTML = navbar("logout",userData.Name)
+}else{
+    window.location.href = "/Project/html/Login.html"
+}
+
+
 const handleQty = (index, opr) => {
   if (opr == "+") {
     cart[index].qty += 1;
@@ -27,7 +37,7 @@ const handleDelete = (index) => {
 //total price
 const countprice = (total) => {
   console.log("total", total);
-  document.getElementById("bill").innerHTML = `total : ${total}`;
+  document.getElementById("bill").innerHTML = ` Cost: ${total}`;
   
   handleDiscount(total);
 };
@@ -40,7 +50,18 @@ const handleDiscount = (countp) => {
   console.log(total_Discount, discount);
  let dis=MakeUi("p",discount)
 
- document.getElementById("bill").append(dis)
+ document.getElementById("bill1").innerHTML = `Discount(10%): ${discount}`
+ document.getElementById("bill2").innerHTML = `Total Bill: ${total_Discount}`
+
+ document.getElementById("Cheack_Out").addEventListener("click",()=>{
+  alert("Your Products Deliver In 2 & 3 Working Day.....");
+
+  localStorage.removeItem("cart");
+  location.reload()
+  
+
+ })
+
 
 
  };
@@ -62,8 +83,8 @@ const ui = (cart) => {
     let td1 = document.createElement("td");
     let img = MakeUi("img", item.Pro_url);
 
-    img.style.width = "250px";
-    img.style.height = "250px";
+    img.style.width = "120px";
+    img.style.height = "100px";
     td1.append(img);
     let td2 = MakeUi("td", item.Pro_Title);
     let td3 = MakeUi("td", item.Pro_Category);
