@@ -9,7 +9,7 @@ console.log("userData",userData);
 if(isLogin){
     document.getElementById("navbar").innerHTML = navbar("logout",userData.Name)
 }else{
-    window.location.href = "/Project/html/Login.html"
+    window.location.href = "/JavaScript/Project/html/Login.html"
 }
 
 
@@ -17,7 +17,7 @@ if(isLogin){
 document.getElementById("login").addEventListener("click",(e)=>{
     e.preventDefault();
     localStorage.removeItem("isLogin");
-    window.location.href = "/Project/html/Login.html"
+    window.location.href = "/JavaScript/Project/html/Login.html"
 
 })
 

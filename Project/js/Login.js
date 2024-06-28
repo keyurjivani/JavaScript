@@ -1,13 +1,15 @@
 import getId from "../components/helper.js";
 import navbar from "../components/navbar.js";
 document.getElementById("navbar").innerHTML = navbar();
+
+
 let isLogin = localStorage.getItem("Islogin") || false ;
 let userData = JSON.parse(localStorage.getItem("User")) || [];
 console.log("userData",userData);
 if(isLogin){
     document.getElementById("navbar").innerHTML = navbar("logout",userData.Name)
 }else{
-    window.location.href = "/Project/html/Login.html"
+    window.location.href = "/JavaScript/Project/html/SignUp.html"
 }
 
 
@@ -37,7 +39,7 @@ const handleData = (e) => {
     }
   } else {
     alert("please sign up ");
-    window.location.href = "/JavaScript/Project/index.html"
+    window.location.href = "/JavaScript/Project/html/SignUp.html"
   }
 };
 
