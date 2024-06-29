@@ -1,22 +1,31 @@
 #div_main{
     border: 1px solid black;
-    height: 505px;
+    height: max-content;
     width: 320px;
     padding: 10px;
     border-radius: 10px;
-    /* text-align: center; */
-
+    text-align: center;
+    transition-duration: 0.8s;
+    background-color: white;
+}
+#div_main:hover{
+    height: 550px;
+    width: 325px;
+    box-shadow: 0px 0px 15px 8px rgb(255, 255, 255);
 }
 #Display{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    /* align-items: cente\; */
+    /* align-items: center; */
 }
 .image{
     height: 250px;
     width: 250px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center;     */
 }
 .Title,.category{
     font-size: 18px;
@@ -32,6 +41,8 @@
     text-align: center;
     display: flex;
     gap: 10px;
+    display: flex;
+    justify-content: center;
 
 }
 #div2{
@@ -44,13 +55,36 @@
 }
 
 #btn1{
-    width: 49%;
+    
+    width: 80%;
     height: 30px;
     border-radius: 10px;
+    background: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-duration: 0.8s;
+    border: none;
 }
-#btn2{
+#btn1:hover{
+    font-size: 18px;
+}
+/* #btn2{
     width: 49%;
+    border: none;
     height: 30px;
     border-radius: 10px;
-
+    font-size: 15px;
+    background: rgb(176, 42, 42);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-duration: 0.8s;
+}
+#btn2:hover{
+    font-size: 18px;
+} */
+.Des{
+    font-size: 17px;
 }
