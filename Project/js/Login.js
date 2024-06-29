@@ -9,7 +9,7 @@ console.log("userData",userData);
 if(isLogin){
     document.getElementById("navbar").innerHTML = navbar("logout",userData.Name)
 }else{
-    window.location.href = "/JavaScript/Project/html/SignUp.html"
+    window.location.href = "/Project/html/SignUp.html"
 }
 
 
@@ -35,11 +35,11 @@ const handleData = (e) => {
     } else {
       alert("login success: " + user.username);
       localStorage.setItem("isLogin", true);
-      window.location.href = "/JavaScript/Project/index.html"
+      window.location.href = "/Project/index.html"
     }
   } else {
     alert("please sign up ");
-    window.location.href = "/JavaScript/Project/html/SignUp.html"
+    window.location.href = "/Project/html/SignUp.html"
   }
 };
 

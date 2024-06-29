@@ -1,6 +1,6 @@
 import getId from "../components/helper.js";
-
 import navbar from "../components/navbar.js";
+
 document.getElementById("navbar").innerHTML = navbar();
 
 
@@ -21,7 +21,7 @@ const handle = (e) => {
     localStorage.setItem("User", JSON.stringify(User));
     localStorage.setItem("Islogin", true);
     document.getElementById("navbar").innerHTML = navbar("logout",User.Name);
-    window.location.href = "/JavaScript/Project/index.html";
+    window.location.href = "/Project/index.html";
 
 
 }
