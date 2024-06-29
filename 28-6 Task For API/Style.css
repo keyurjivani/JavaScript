@@ -1,0 +1,56 @@
+#div_main{
+    border: 1px solid black;
+    height: 505px;
+    width: 320px;
+    padding: 10px;
+    border-radius: 10px;
+    /* text-align: center; */
+
+}
+#Display{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    /* align-items: cente\; */
+}
+.image{
+    height: 250px;
+    width: 250px;
+}
+.Title,.category{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Price{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#div3{
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+
+}
+#div2{
+    /* text-align: center; */
+}
+.Rating{
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+}
+
+#btn1{
+    width: 49%;
+    height: 30px;
+    border-radius: 10px;
+}
+#btn2{
+    width: 49%;
+    height: 30px;
+    border-radius: 10px;
+
+}
