@@ -19,7 +19,7 @@ const navbar = (login = " login", Signup = "signup") => {
             <a
               class="nav-link active text-light fs-5"
               aria-current="page"
-              href="/JavaScript/Project/index.html"
+              href="/Project/index.html"
               >Home</a
             >
           </li>
