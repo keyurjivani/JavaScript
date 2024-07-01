@@ -1,13 +1,47 @@
 
-
+// let array = JSON.parse(localStorage.getItem("array"))
 
 const get = async()=>{
     let req = await fetch("https://dummyjson.com/products")
     let res = await req.json()
-    console.log(res);
-    
+    // console.log(res);
+    ui(res.products);
+    // localStorage.setItem("data",JSON.stringify(res.products))
+    document.getElementById("All").addEventListener("click",()=>{
+   
+        
+        ui(res.products);
+    })
 
-    ui(res.products)
+
+    document.getElementById("lth").addEventListener("click",()=>{
+        let temp = (res.products).sort((a,b)=>a.price - b.price)
+        ui(temp)
+    })
+
+    document.getElementById("htl").addEventListener("click",()=>{
+        let temp = (res.products).sort((a,b)=>b.price - a.price)
+        ui(temp)
+    })
+
+    document.getElementById("serach").addEventListener("submit",(e)=>{
+        e.preventDefault()
+        let value = document.getElementById("serching").value
+        let temp = (res.products).filter((ele)=>ele.title.includes(value));
+        ui(temp)
+    })
+
+    document.getElementById("serach1").addEventListener("submit",(e)=>{
+        e.preventDefault()
+        let value = document.getElementById("serching1").value
+        let temp = (res.products).filter((ele)=>ele.category.includes(value));
+        ui(temp)
+    })
+
+
+
+
+
 }
 get()
 
@@ -63,11 +97,10 @@ const ui = (data) =>{
     })
 }
 
-const sort = () =>{
-    let temp = res.products.filter((ele)=>ele.res.products.category == res.products.category)
-    console.log(temp);
-}
 
 
 
-document.getElementById("lth").addEventListener("click",sort("lth"))
+
+
+
+

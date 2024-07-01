@@ -45,11 +45,39 @@ const uim = (data) =>{
 
         let Buy = document.createElement("button");
         Buy.innerHTML = "Buynow"
+
+
               
 
         let div = document.createElement("div");
+    
         div.append(image,title,category,price,des,rat,stock,Buy)
-        div.style.border = "1px solid black"
+
+
+
+
+        // div.style.border = "1px solid black"
 
         document.getElementById("Data").append(div)
+
+
+
+        data.reviews.map((ele)=>{
+            let rating = document.createElement("p");
+            rating.innerHTML = `Rating : ${ele.rating}`
+
+            let comment = document.createElement("p");
+            comment.innerHTML = `Comment : ${ele.comment}` 
+           
+            let date = document.createElement("p");
+            date.innerHTML = `Date : ${ele.date}` 
+
+            let div = document.createElement("div")
+            div.append(rating,comment,date)
+            div.style.border = "1px solid black"
+
+            document.getElementById("Data").append(div)
+
+            
+        })
 }
