@@ -22,6 +22,7 @@ const handle = (e) => {
       console.log(User);
       localStorage.setItem("User", JSON.stringify(User));
       localStorage.setItem("Islogin", true);
+      window.location.href = "/EXAM_7/index.html"
 
      
   

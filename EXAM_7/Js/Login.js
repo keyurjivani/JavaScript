@@ -2,7 +2,17 @@ import Navbar from "../Components/Navbar.js";
 
 document.getElementById("navbar").innerHTML = Navbar()
 
-let userData = JSON.parse(localStorage.getItem("User"));
+// let userData = JSON.parse(localStorage.getItem("User"));
+
+let IsLogin = localStorage.getItem("Islogin") || false ;
+let userData = JSON.parse(localStorage.getItem("User")) || [];
+console.log("userData",userData);
+if(IsLogin){
+    document.getElementById("navbar").innerHTML = Navbar()
+}else{
+  e.preventDefault();
+    window.location.href = "/EXAM_7/Pages/Login.html"
+}
 
 
 const handleData = (e) => {

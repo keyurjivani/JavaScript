@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar.js";
 document.getElementById("navbar").innerHTML = Navbar()
 
 let Place = JSON.parse(localStorage.getItem("Place")) || [];
+// console.log("Place",Place);
 const handlePlace = (e) =>{
     e.preventDefault();
 
@@ -16,10 +17,10 @@ const handlePlace = (e) =>{
         id: Place.length == 0 ? 1 : Place[Place.length-1].id + 1,
         like : 0
     }
-    console.log(Data);
+    // console.log(Data);
     Place.push(Data)
     localStorage.setItem("Place",JSON.stringify(Place))
-    window.location.href = "http://127.0.0.1:3000/index.html"
+    window.location.href = "/EXAM_7/index.html"
 }
 
 
