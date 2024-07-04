@@ -106,7 +106,8 @@ const UiMake = (Place) =>{
         div.style.textAlign = "center"
         div.append(img,Title,Cost,like,btn)
 
-        btn.addEventListener("click",(i)=>{
+        btn.addEventListener("click",()=>{
+            localStorage.setItem("index",i)
             window.location.href = "/EXAM_7/Pages/singlepage.html"
         })
 

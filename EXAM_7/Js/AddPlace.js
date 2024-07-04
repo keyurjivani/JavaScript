@@ -15,7 +15,8 @@ const handlePlace = (e) =>{
         Des :  document.getElementById("Des").value,
         Cost : document.getElementById("Cost").value,
         id: Place.length == 0 ? 1 : Place[Place.length-1].id + 1,
-        like : 0
+        like : 0,
+        comment : []
     }
     // console.log(Data);
     Place.push(Data)

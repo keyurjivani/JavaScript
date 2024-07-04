@@ -1,0 +1,55 @@
+#main
+{   
+    display: block;
+    justify-content: center;
+    margin-top: 100px;
+    width: 50%;
+}
+#div1{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+#div2{
+    border: 1px solid black;
+    width: max-content;
+    margin-right: 10px;
+}
+#div3{
+    border: 1px solid rgb(242, 26, 26);
+    width: max-content;
+}
+#div_child{
+    border: 1px solid rgb(0, 137, 171);
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+#div3_1{
+    display: flex;
+}
+#div5,#div6{
+    display: flex;
+    justify-content: center;
+
+}
+#Wheather{
+    display: flex;
+    justify-content: center;
+}
+
+form input{
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 8px 0px 0px 8px;
+}
+#submit{
+    height: 36px;
+    border-radius: 0px 8px 8px 0px;
+
+}
+#date{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

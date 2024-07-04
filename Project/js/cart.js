@@ -61,9 +61,6 @@ const handleDiscount = (countp) => {
     localStorage.removeItem("cart");
     location.reload()
   }
-
-  
-
  })
 
 
