@@ -3,30 +3,42 @@
     display: block;
     justify-content: center;
     margin-top: 100px;
-    width: 50%;
+    width: 40%;
 }
 #div1{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
+    color: white;
 }
 #div2{
-    border: 1px solid black;
-    width: max-content;
+    /* border: 1px solid black; */
+    width: 100%;
     margin-right: 10px;
+    display: flex;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* left: 45%; */
+    bottom: 50px;
 }
 #div3{
-    border: 1px solid rgb(242, 26, 26);
+    /* border: 1px solid rgb(242, 26, 26); */
     width: max-content;
+    color: white;
 }
 #div_child{
-    border: 1px solid rgb(0, 137, 171);
+    /* border: 1px solid rgb(0, 137, 171); */
     display: flex;
     padding: 10px;
     justify-content: space-around;
+    position: relative;
+    bottom: 175px;
 }
 #div3_1{
     display: flex;
+    color: white;
 }
 #div5,#div6{
     display: flex;
@@ -52,4 +64,37 @@ form input{
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    font-size: 20px;
+    color: White;
+}
+.back_video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio:16/9){
+    .back_video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9){
+    .back_video{
+        width: auto;
+        height: 100%;
+    }
+}
+#div4,#div6{
+    color: white;
+}
+#div6{
+    position: relative;
+    bottom: 200px;
+}
+#div5{
+    color: white;
+    position: relative;
+    bottom: 220px;
 }
