@@ -1,85 +1,69 @@
-
 let products = JSON.parse(localStorage.getItem("Place")) || [];
 
-let index = JSON.parse(localStorage.getItem("index"))
-// const handleLike =()=>{
-//     UserData.like+=1;
-//     console.log(UserData.like)
-//     // localStorage.setItem("Place",JSON.stringify(Place));
-//     Ui(UserData)
-//  }
-
-// const comment = () =>{
-//     prompt("Add")
-// }
+let index = JSON.parse(localStorage.getItem("index"));
 
 const Ui = (Place) => {
   document.getElementById("show").innerHTML = "";
-  // UserData((ele) => {
-    let img = document.createElement("img");
-    img.src = Place[index].Url1;
-    img.style.width = "250px";
-    img.style.height = "250px";
-    img.style.margin = "20px ";
 
-    let img1 = document.createElement("img");
-    img1.src = Place[index].Url2;
-    img1.style.width = "250px";
-    img1.style.height = "250px";
-    img1.style.margin = "20px ";
+  let img = document.createElement("img");
+  img.src = Place[index].Url1;
+  img.style.width = "250px";
+  img.style.height = "250px";
+  img.style.margin = "20px ";
 
-    let img2 = document.createElement("img");
-    img2.src = Place[index].Url3;
-    img2.style.width = "250px";
-    img2.style.height = "250px";
-    img2.style.margin = "20px ";
+  let img1 = document.createElement("img");
+  img1.src = Place[index].Url2;
+  img1.style.width = "250px";
+  img1.style.height = "250px";
+  img1.style.margin = "20px ";
 
-    let Title = document.createElement("h3");
-    Title.innerHTML = Place[index].Title;
+  let img2 = document.createElement("img");
+  img2.src = Place[index].Url3;
+  img2.style.width = "250px";
+  img2.style.height = "250px";
+  img2.style.margin = "20px ";
 
-    let Des = document.createElement("p");
-    Des.innerHTML = Place[index].Des;
+  let Title = document.createElement("h3");
+  Title.innerHTML = Place[index].Title;
 
-    let Cost = document.createElement("h5");
-    Cost.innerHTML = Place[index].Cost;
+  let Des = document.createElement("p");
+  Des.innerHTML = Place[index].Des;
 
-    let like = document.createElement("button");
-    like.innerHTML = `like : ${Place[index].like}`;
-    like.addEventListener("click", () => handleLike());
-    like.style.margin = "10px";
+  let Cost = document.createElement("h5");
+  Cost.innerHTML = Place[index].Cost;
 
-        let comment = document.createElement("button");
-        comment.innerHTML = `comment `
-       comment.addEventListener("click",()=>{
-        prompt("addd")
+  let like = document.createElement("button");
+  like.innerHTML = `like : ${Place[index].like}`;
+  like.addEventListener("click", () => handleLike());
+  like.style.margin = "10px";
 
-       })
-    comment.style.margin = "10px"
+  let comment = document.createElement("button");
+  comment.innerHTML = `comment `;
+  comment.addEventListener("click", () => {
+    prompt("addd");
+  });
+  comment.style.margin = "10px";
 
-    let share = document.createElement("button");
-    share.innerHTML = `share `
-    share.addEventListener("click",()=>{
-      alert("No Available Social Media")
-    })
+  let share = document.createElement("button");
+  share.innerHTML = `share `;
+  share.addEventListener("click", () => {
+    alert("No Available Social Media");
+  });
 
-    document
-      .getElementById("show")
-      .append(img,img1,img2,Title,Des,Cost,like,share);
-  // });
-}
+  document
+    .getElementById("show")
+    .append(img, img1, img2, Title, Des, Cost, like, share);
+};
 Ui(products);
-
 
 document.getElementById("data").addEventListener("submit", (e) => {
   e.preventDefault();
   let com = {
     comment: document.getElementById("comment").value,
   };
-  // console.log(com);
   products[index].comment.push(com);
   localStorage.setItem("Place", JSON.stringify(products));
   location.reload();
-  
 });
 
 const uimaker = () => {
@@ -92,4 +76,3 @@ const uimaker = () => {
 };
 
 uimaker();
-
