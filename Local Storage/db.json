@@ -1,3 +1,20 @@
 {
-    "Producs" : []
+  "users": [
+    {
+      "id": "188f",
+      "name": "abc",
+      "city": "mumbai",
+      "phone_no": 96532
+    },
+    {
+      "id": "a69f",
+      "name": "vandan",
+      "number": "11121212"
+    },
+    {
+      "id": "e734",
+      "name": "amee",
+      "number": "0102030"
+    }
+  ]
 }
