@@ -1,5 +1,7 @@
 import { api } from "../Api/All.api.js";
+import navbar from "../Compopnents/navbar.js";
 
+document.getElementById("navbar").innerHTML = navbar()
 
 let data = await api.get();
 // console.log(data);
