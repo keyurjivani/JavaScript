@@ -1,6 +1,7 @@
-// import { api } from "../Api/All.api.js"
+import { api } from "../Api/All.api.js"
 
-// let data = await api.get();
+let data = await api.get();
+console.log("getdata",data);
 const HandleLogin = (e) =>{
     e.preventDefault()
 
@@ -10,22 +11,36 @@ const HandleLogin = (e) =>{
     }
     console.log(Login_Data.Email);
 
-    // let tem = data.map((ele)=> ele.Email)
-    // console.log("tem",tem);
-
-    // if(tem.value == Login_Data.Email ){
-    //     alert("All Ready Exsists")
-    // }
+    for(let i=0;i<data.length;i++)
+    {
+        if(data[i].Email != Login_Data.Email && data[i].password != Login_Data.password)
+        {
+            alert("Not Found Data")
+            break
+        }else{
+            if(data[i].Email == Login_Data.Email && data[i].password == Login_Data.password)
+                {
+                    alert("SuccessFull Your Login Proccess!!!")
+                    break
+                }else if(data[i].Email != Login_Data.Email)
+                {
+                    alert("Your Email Not Found, Please Check Email")
+                    break
+                }else if(data[i].password != Login_Data.password)
+                {
+                    alert("Your Password Not Current, Please Check Password")
+                    break
+                }
+        }
+        
+        
+    }
    
 }
 
 
 
-// const filter = (data) =>{
-//     let temp = data.map((ele)=> ele.Email)
-//     // console.log(temp);
-// }
-// filter(data)
+
 
 
 

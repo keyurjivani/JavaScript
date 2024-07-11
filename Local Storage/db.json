@@ -1,6 +1,26 @@
 {
   "User": [
-    
+    {
+      "id": "bc83",
+      "Name": "a",
+      "Email": "a@gmail.com",
+      "Phone_No": "11",
+      "password": "1"
+    },
+    {
+      "id": "2b2b",
+      "Name": "b",
+      "Email": "b@gmail.com",
+      "Phone_No": "22",
+      "password": "2"
+    },
+    {
+      "id": "2cf6",
+      "Name": "c",
+      "Email": "c@gmail.com",
+      "Phone_No": "33",
+      "password": "3"
+    }
   ],
   "Products": [],
   "Cart": [],
