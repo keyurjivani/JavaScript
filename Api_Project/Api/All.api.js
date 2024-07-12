@@ -1,6 +1,6 @@
 export const api = {
     post: async(data)=>{
-        let req = await fetch (`http://localhost:3000/User`,{
+        let req = await fetch (`https://manage-db-json.onrender.com/User`,{
             method : "POST",
             headers : {"Content-type":"application/json"},
             body : JSON.stringify(data)
@@ -9,13 +9,13 @@ export const api = {
     },
 
     get:async()=>{
-        let req = await fetch(`http://localhost:3000/User`);
+        let req = await fetch(`https://manage-db-json.onrender.com/User`);
         let res = await req.json();
         return res;
     },
 
     Patch: async(id,data)=>{
-        let req = await fetch(`http://localhost:3000/User/${id}`,{
+        let req = await fetch(`https://manage-db-json.onrender.com/User/${id}`,{
             method : "PATCH",
             headers : {"Content-type":"application/json"},
             body : JSON.stringify(data)
@@ -23,7 +23,7 @@ export const api = {
     },
 
     Delete: async(id)=>{
-        let req = await fetch(`http://localhost:3000/User/${id}`,{
+        let req = await fetch(`https://manage-db-json.onrender.com/User/${id}`,{
             method : "DELETE",
         })
     }
