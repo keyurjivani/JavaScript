@@ -1,5 +1,5 @@
 body{
-    background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20231027/pngtree-hexagonal-abstract-background-with-a-black-textured-surface-image_13704307.png") ;
+    background-image:url("https://static.vecteezy.com/system/resources/previews/006/789/451/non_2x/abstract-black-friday-wallpaper-luxury-background-template-color-art-template-business-dark-vector.jpg") ;
     background-size: 100%;
     background-repeat: repeat;
     object-fit: fill;
@@ -7,7 +7,7 @@ body{
 span{
     font-size: 13px;
     font-weight: 500;
-    color: white;
+    color: #ffd900db;
 }
 #Form_css{
     height: 600px;
@@ -32,6 +32,7 @@ input{
     width: 300px;
     border-radius: 8px;
     height: 38px;
+    border: 2px solid #000000db;
 }
 #btn_submit{
     width: 250px;
@@ -40,6 +41,7 @@ input{
     background: #000000;
     color: white;
     font-weight: 600;
+    border: 2px solid #ffd900db;
 }
 #btn_submit:hover{
     width: 300px;
@@ -49,12 +51,13 @@ h4{
     color: rgb(255, 255, 255);
     font-size: xx-large;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 #Display_center{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #ffd900db;
     border-radius: 10px;
     width: 50%;
     padding: 10px;
