@@ -41,7 +41,7 @@ input{
     background: #000000;
     color: white;
     font-weight: 600;
-    border: 2px solid #ffd900db;
+    border: 1px solid #ffd900db;
 }
 #btn_submit:hover{
     width: 300px;
@@ -50,7 +50,8 @@ input{
 h4{
     color: rgb(255, 255, 255);
     font-size: xx-large;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: 5px;
     margin-bottom: 20px;
 }
 #Display_center{
@@ -66,4 +67,50 @@ h4{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+
+@media (min-width: 0px) and (max-width: 576px) {
+    #Display_center {
+      display: flex;
+      flex-wrap: wrap;
+      height: max-content;
+      width: max-content;
+    }
+    #Login_css{
+        margin-top: 50px;
+    }
+
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    #Display_center {
+      display: flex;
+      height: max-content;
+      width: max-content;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    #Display_center {
+      display: flex;
+      height: max-content;
+      width: max-content;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    #Display_center {
+      display: flex;
+      height: max-content;
+      width: max-content;
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    #Display_center {
+      display: flex;
+
+      height: max-content;
+      width: max-content;
+    }
+  }
 

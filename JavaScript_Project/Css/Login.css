@@ -11,6 +11,7 @@
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     width: 50%;
+    height: max-content;
     padding: 10px;
     height: 350px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -57,9 +58,50 @@ h4{
     
 }
 
+@media (min-width: 0px) and (max-width: 576px) {
+    #Display_center {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      height: max-content;
+      width: max-content;
+    }
+    #Login_css{
+        margin-top: 80px;
+    }
 
-/* .Image{
-    width: 100px;
-    height: 100px;
-    border: 1pc solid red;
-} */
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    #Display_center {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      height: max-content;
+      width: max-content;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    #Display_center {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      height: max-content;
+      width: max-content;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    #Display_center {
+      display: flex;
+      height: max-content;
+      width: max-content;
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    #Display_center {
+      display: flex;
+
+      height: max-content;
+      width: max-content;
+    }
+  }
