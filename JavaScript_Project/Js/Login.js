@@ -1,5 +1,5 @@
 let Data_array = JSON.parse(localStorage.getItem('Data')) || [];
-console.log(Data_array);
+console.log("Data_array",Data_array);
 
 const handleLogin = (e) =>{
     e.preventDefault();
@@ -8,7 +8,7 @@ const handleLogin = (e) =>{
         Email : document.getElementById("Email").value,
         password : document.getElementById("password").value 
     }
-    console.log(Login_Data);
+    console.log(Login_Data);    
 
     for(let i=0;i<Data_array.length;i++)
         {

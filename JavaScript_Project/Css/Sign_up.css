@@ -4,113 +4,11 @@ body{
     background-repeat: repeat;
     object-fit: fill;
 }
-span{
-    font-size: 13px;
-    font-weight: 500;
-    color: #ffd900db;
-}
-#Form_css{
-    height: 600px;
-    width: 100%;
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#form{
-    /* border: 1px solid black; */
-    width: 320px;
-    height: 330px;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); */
-}
-input{
-    width: 300px;
-    border-radius: 8px;
-    height: 38px;
-    border: 2px solid #000000db;
-}
-#btn_submit{
-    width: 250px;
-    height: 38px;
-    transition-duration: 1.2s;
-    background: #000000;
-    color: white;
-    font-weight: 600;
-    border: 1px solid #ffd900db;
-}
-#btn_submit:hover{
-    width: 300px;
-    height: 35px;
-}
-h4{
-    color: rgb(255, 255, 255);
-    font-size: xx-large;
-    font-weight: 600;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-}
-#Display_center{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 2px solid #ffd900db;
-    border-radius: 10px;
-    width: 50%;
-    padding: 10px;
-    height: 350px;
+#Blur{
+ 
+    
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
 }
-
-@media (min-width: 0px) and (max-width: 576px) {
-    #Display_center {
-      display: flex;
-      flex-wrap: wrap;
-      height: max-content;
-      width: max-content;
-    }
-    #Login_css{
-        margin-top: 50px;
-    }
-
-  }
-
-  @media (min-width: 576px) and (max-width: 768px) {
-    #Display_center {
-      display: flex;
-      height: max-content;
-      width: max-content;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 992px) {
-    #Display_center {
-      display: flex;
-      height: max-content;
-      width: max-content;
-    }
-  }
-
-  @media (min-width: 992px) and (max-width: 1200px) {
-    #Display_center {
-      display: flex;
-      height: max-content;
-      width: max-content;
-    }
-  }
-
-  @media (min-width: 1200px) and (max-width: 1400px) {
-    #Display_center {
-      display: flex;
-
-      height: max-content;
-      width: max-content;
-    }
-  }
-
