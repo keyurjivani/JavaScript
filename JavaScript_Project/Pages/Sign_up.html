@@ -14,32 +14,37 @@
   <link rel="stylesheet" href="../Css/Sign_up.css">
 </head>
 
-<body >
+<body>
   <header class="bg-white">
     <nav class="flex justify-between items-center w-[92%]  mx-auto">
       <div>
-        <img class="w-14" src="./01.jpg" alt="..." >
+        <img class="w-14" src="./01.jpg" alt="...">
       </div>
       <div
         class=" nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
         <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
           <li>
-            <a class="hover:text-yellow-600 text-base text-dark font-medium tracking-wide" href="/JavaScript_Project/index.html">Home</a>
+            <a class="hover:text-yellow-600 text-base text-dark font-medium tracking-wide"
+              href="/JavaScript_Project/index.html">Home</a>
           </li>
           <li>
             <a class="hover:text-yellow-600 text-base font-medium tracking-wide" href="#">Products</a>
           </li>
           <li>
-            <a class="hover:text-yellow-600 text-base font-medium tracking-wide" href="/JavaScript_Project/Pages/Order.html">Order</a>
+            <a class="hover:text-yellow-600 text-base font-medium tracking-wide"
+              href="/JavaScript_Project/Pages/Order.html">Order</a>
           </li>
           <li>
-            <a class="hover:text-yellow-600 text-base font-medium tracking-wide" href="/JavaScript_Project/Pages/Login.html">Login</a>
+            <a class="hover:text-yellow-600 text-base font-medium tracking-wide"
+              href="/JavaScript_Project/Pages/Login.html">Login</a>
           </li>
           <li>
-            <a class="hover:text-yellow-600 text-base font-medium tracking-wide" href="/JavaScript_Project/Pages/Sign_up.html">Sign Up</a>
+            <a class="hover:text-yellow-600 text-base font-medium tracking-wide"
+              href="/JavaScript_Project/Pages/Sign_up.html">Sign Up</a>
           </li>
           <li>
-            <a class="hover:text-yellow-600 text-base font-medium tracking-wide" href="/JavaScript_Project/Pages/About.html">About Us</a>
+            <a class="hover:text-yellow-600 text-base font-medium tracking-wide"
+              href="/JavaScript_Project/Pages/About.html">About Us</a>
           </li>
 
         </ul>
@@ -51,66 +56,69 @@
   </header>
 
 
-  <!-- <div class="d-flex justify-content-center align-items-center">
-    <div class="border-2 w-max"> -->
+  <div class="flex h-75 flex-col justify-center align-middle py-16 lg:px-8 " id="bg_img">
 
-      <div class="flex h-75 flex-col justify-center align-middle py-16 lg:px-8 " id="bg_img">
-        
-        <div class=" sm:mx-auto sm:w-full sm:max-w-sm border-2 px-8  rounded-lg" id="Blur">
+    <div class=" sm:mx-auto sm:w-full sm:max-w-sm border-2 px-8  rounded-lg" id="Blur">
 
-          <br>
-          <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h2 class="text-yellow-500  text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 tracking-wider">Sign in to your
-              account</h2>
-          </div><br>
-          <form class="space-y-6" id="form">
-            <div>
-              <label for="Name" class="text-yellow-500 block text-sm font-medium leading-6 text-gray-900">UserName : </label>
-              <div class="mt-2">
-                <input id="Name" name="Name" type="Name" autocomplete="Name" required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                  <span id="u-msg" class="text-white text-sm"  ></span>
-              </div>
-            </div>
-            <div>
-              <label for="Email" class="text-yellow-500 block text-sm font-medium leading-6 text-gray-900">Email address :</label>
-              <div class="mt-2">
-                <input id="Email" name="Email" type="Email" autocomplete="Email" required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                  <span id="em-msg" class="text-white text-sm" ></span>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex items-center justify-between">
-                <label for="password" class="text-yellow-500 block text-sm font-medium leading-6 text-gray-900">Password :</label>
-                <div class="text-sm">
-                  <a href="#" class="text-white font-semibold text-indigo-600 hover:text-yellow-500">Forgot password?</a>
-                </div>
-              </div>
-              <div class="mt-2">
-                <input id="password" name="password" type="password" autocomplete="current-password" required
-                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                  <span id="p-msg" class="text-white text-sm" ></span>
-              </div>
-            </div>
-
-            <div>
-              <button type="submit"
-                class="bg-yellow-500 flex w-full justify-center rounded-md  px-3 py-1.5 text-md  leading-6 text-sky-950 font-bold tracking-widest  shadow-sm hover:bg-yello-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign
-                in</button>
-            </div>
-          </form>
-
-          <p class="mt-10 text-center text-sm text-stone-50">
-            Not a member?
-            <a href="#" class="text-yellow-500 font-semibold leading-6 text-indigo-600 hover:text-indigo-200">Start a 14 day free
-              trial</a>
-          </p><br>
+      <br>
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <h2
+          class="text-yellow-500  text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 tracking-wider">
+          Sign in to your
+          account</h2>
+      </div><br>
+      <form class="space-y-6" id="form">
+        <div>
+          <label for="Name" class="text-yellow-500 block text-sm font-medium leading-6 text-gray-900">UserName :
+          </label>
+          <div class="mt-2">
+            <input id="Name" name="Name" type="Name" autocomplete="Name" required
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <span id="u-msg" class="text-white text-sm"></span>
+          </div>
         </div>
-      </div>
+        <div>
+          <label for="Email" class="text-yellow-500 block text-sm font-medium leading-6 text-gray-900">Email address
+            :</label>
+          <div class="mt-2">
+            <input id="Email" name="Email" type="Email" autocomplete="Email" required
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <span id="em-msg" class="text-white text-sm"></span>
+          </div>
+        </div>
 
+        <div>
+          <div class="flex items-center justify-between">
+            <label for="password" class="text-yellow-500 block text-sm font-medium leading-6 text-gray-900">Password
+              :</label>
+            <div class="text-sm">
+              <a href="#" class="text-white font-semibold text-indigo-600 hover:text-yellow-500">Forgot password?</a>
+            </div>
+          </div>
+          <div class="mt-2">
+            <input id="password" name="password" type="password" autocomplete="current-password" required
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <span id="p-msg" class="text-white text-sm"></span>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit"
+            class="bg-yellow-500 flex w-full justify-center rounded-md  px-3 py-1.5 text-md  leading-6 text-sky-950 font-bold tracking-widest  shadow-sm hover:bg-yello-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign
+            in</button>
+        </div>
+      </form>
+
+      <p class="mt-10 text-center text-sm text-stone-50">
+        Not a member?
+        <a href="#" class="text-yellow-500 font-semibold leading-6 text-indigo-600 hover:text-indigo-200">Start a 14 day
+          free
+          trial</a>
+      </p><br>
     </div>
+  </div>
+
+  </div>
   </div>
 </body>
 <script>
@@ -118,7 +126,7 @@
   function onToggleMenu(e) {
     e.name = e.name === 'menu' ? 'close' : 'menu'
     navLinks.classList.toggle('top-[10%]')
-  
+
     navLinks.classList.toggle('z-[50]')
   }
 </script>
