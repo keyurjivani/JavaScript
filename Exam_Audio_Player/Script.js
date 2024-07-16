@@ -65,7 +65,7 @@ const songsplay = (id) =>{
   document.getElementById("page").innerHTML = ""
 
   let a = music[id].name
-  // a.style.color = "white"
+
 
   let b = document.createElement('img');
   b.src = music[id].img
