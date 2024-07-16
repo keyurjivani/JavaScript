@@ -87,34 +87,7 @@ const MUSIC=(data)=>{
         Music_url.play();
     });
 
-    // let main= document.createElement("div");
-    // main.setAttribute("class", "player");
-    // let prew=document.createElement("div")
-    // prew.textContent="<<<";
-    // let stop=document.createElement("div")
-    // stop.textContent="o"
-    // let next=document.createElement("div")
-    // next.textContent=">>>";
 
-    // prew.addEventListener("click", () => {
-    //     if(i===0){
-    //         arr[arr.length-1].music.play();
-    //     }else{
-    //         arr[i-1].music.play();
-    //     }
-    // })
-    
-    // stop.addEventListener("click", () => {
-    //     music.pause();
-    // })
-    
-    // next.addEventListener("click", () => {
-    //     if(i===arr.length-1){
-    //         arr[0].music.play();
-    //     } else{
-    //         arr[i+1].music.play();
-    //     }
-    // })
 
     // main.append(prew, stop, next)
     let musicContainer = document.getElementById("music");
