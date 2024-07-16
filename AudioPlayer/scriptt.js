@@ -95,11 +95,12 @@ const MUSIC=(data)=>{
 
 }
 arr.map((arr, i) =>{
-  
-  let songplay = document.createElement("h2");
-  songplay.innerHTML = arr.Music_name;
-  songplay.addEventListener("click", () => {
-      MUSIC(i)
-  });
-  document.getElementById("page").append(songplay);
+
+    
+    let songplay = document.createElement("h2");
+    songplay.innerHTML = arr.Music_name;
+    songplay.addEventListener("click", () => {
+        MUSIC(i)
+    });
+    document.getElementById("page").append(songplay);
 })
