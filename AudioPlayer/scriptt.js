@@ -123,10 +123,10 @@ const MUSIC=(data)=>{
 }
 arr.map((arr, i) =>{
     
-    let vandan = document.createElement("h2");
-    vandan.innerHTML = arr.Music_name;
-    vandan.addEventListener("click", () => {
+    let songplay = document.createElement("h2");
+    songplay.innerHTML = arr.Music_name;
+    songplay.addEventListener("click", () => {
         MUSIC(i)
     });
-    document.getElementById("page").append(vandan);
+    document.getElementById("page").append(songplay);
 })
