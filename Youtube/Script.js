@@ -17,14 +17,18 @@ const Ui =(data) =>{
     div.append(img,p,description);
     div.setAttribute('id', 'div');
 
-    document.getElementById('Display').append(div)
+    let div1 = document.createElement('div');
+    div1.append(div);
+    div1.setAttribute('id', 'div1');
+
+    document.getElementById('Display').append(div1)
   })
 }
 
 
 
 const getVideo = async(data) =>{
-    let req = await fetch (`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${data}&type=video&key=AIzaSyCGd4IaUr_sf2BoMMSwX-XyX2kKSLOvKMw`)
+    let req = await fetch (`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${data}&type=video&key=AIzaSyCa0VKzBu7grAwUFEpYEKipHsxIdRN4_hY`)
     let res = await req.json();
     console.log(res.items);
     Ui(res.items)
