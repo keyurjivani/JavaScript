@@ -69,8 +69,12 @@ const songsplay = (id) =>{
 
   let b = document.createElement('img');
   b.src = music[id].img
-  b.style.width = "80px";
-  b.style.height = "80px";
+  b.style.width = "180px";
+  b.style.height = "180px";
+  b.style.border = "1px solid"
+  b.style.borderRadius = "50%"
+  
+
 
   let c = document.createElement('audio');
   c.src = music[id].song
@@ -111,19 +115,20 @@ const songsplay = (id) =>{
 
 
   let div = document.createElement("div")
-  div.append(a,b)
+  div.append(b)
   div.setAttribute("class", "div")
-
-  let div1 = document.createElement("div")
-  div1.append(c)
-  div1.setAttribute("class", "div1")
-
   let div2 = document.createElement("div")
   div2.append(prev,puse,next)
   div2.setAttribute("class", "div2")
 
+  let div1 = document.createElement("div")
+  div1.append(c,div2)
+  div1.setAttribute("class", "div1")
+
+  
+
   let div_main = document.createElement("div")
-  div_main.append(div,div1,div2)
+  div_main.append(div,div1)
   div_main.setAttribute("class", "div_main")
 
   
@@ -146,16 +151,18 @@ const Musicui = (music) => {
 
     let img = document.createElement('img');
     img.src = ele.img
-    img.style.width = "50px";
-    img.style.height = "50px";
-
+    img.style.width = "30px";
+    img.style.height = "30px";
+    img.style.border = "1px solid"
+    img.style.borderRadius = "50%"
+    
     let div = document.createElement('div');
     div.append(name,img)
     div.style.display = "flex";
     div.style.border = "1px solid White"
     div.style.borderRadius = "10px"
-    div.style.width = "300px";
-    div.style.height = "50px";
+    div.style.width = "560px";
+    div.style.height = "40px";
     div.style.margin = "10px";
     div.style.padding = "8px";
     div.style.justifyContent = "space-between";
@@ -169,7 +176,7 @@ const Musicui = (music) => {
   
 
     document.getElementById("audio_song").append(div)
-    1
+    
   })
 }
 Musicui(music)
