@@ -54,7 +54,13 @@ const Mapper = (data) => {
         btn1.innerHTML = "qty : 1";
 
         let div = document.createElement('div');
-
+        div.style.border = "1px solid"
+        div.style.textAlign = "center"
+        div.style.padding = "10px"
+        div.style.marginTop = "10px"
+        div.style.width = "350px"
+        div.style.borderRadius = "10px"
+        div.setAttribute("class", "divmain")
         div.append(img, title, price,btn1)
 
         document.getElementById("productList").append(div)
