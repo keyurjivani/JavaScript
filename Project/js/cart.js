@@ -67,14 +67,7 @@ const handleDiscount = (countp) => {
 
  };
 
-const billUI = (td2, td6) => {
-  // document.getElementById("bill").innerText = "";
-  // cart.map((item, i) => {
-  //   let td2 = MakeUi("td", item.Pro_Title);
-  //   let td6 = MakeUi("td", item.Pro_Price * item.qty);
-  //   document.getElementById("bill").append(td2, td6);
-  // });
-};
+
 
 const ui = (cart) => {
   document.getElementById("list").innerHTML = "";

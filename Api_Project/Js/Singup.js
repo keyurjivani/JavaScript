@@ -4,19 +4,7 @@ import navbar from "../Compopnents/navbar.js";
 document.getElementById("navbar").innerHTML = navbar()
 
 let data = await api.get();
-// console.log(data);
-// let array = []
-// console.log(array);
-
-// const filter = (data) =>{
-//     let temp = data.map((ele)=> ele.Email)
-//     // console.log(temp);
-//     array.push(temp)
-//     return temp;
-// }
-// filter(data)
-
-
+console.log(data);
 const HandleData = (e) =>{
     e.preventDefault();
 
@@ -26,10 +14,6 @@ const HandleData = (e) =>{
         Phone_No : document.getElementById("Phone_No").value,
         password : document.getElementById("password").value 
     }
-
-    // console.log(User_Data);
-    // api.post(User_Data)
-    // console.log(array);
 
     let flag = false;
 
@@ -46,10 +30,6 @@ const HandleData = (e) =>{
         alert("Your Signup SuccessFully.")
         alert("Thank You")
     }
-    
-
-
-
 }   
 
 

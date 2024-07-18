@@ -42,10 +42,4 @@ const HandleLogin = (e) =>{
    
 }
 
-
-
-
-
-
-
 document.getElementById("Login").addEventListener("submit",HandleLogin)
