@@ -24,15 +24,15 @@ const navbar = () => {
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fs-5" href=""></a>
+            <a class="nav-link text-light fs-5" href="../Pages/Product.html">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fs-5" href=""
-              ></a
+            <a class="nav-link text-light fs-5" href="../Pages/cart.html"
+              >Cart</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light fs-5" href=""></a>
+            <a class="nav-link text-light fs-5" href="../Pages/AddProducts.html">AddProducts</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light fs-5" href="/Pages/Login.html">Login</a>
@@ -42,7 +42,7 @@ const navbar = () => {
             <a class="nav-link text-light fs-5" href="/Pages/Signup.html">Sign Up</a>
           </li>
         </ul>
-        <form class="d-flex text-light fs-5" role="search" id="search">
+        <!-- <form class="d-flex text-light fs-5" role="search" id="search">
           <input
             class="form-control me-2 text-light fs-5"
             type="search"
@@ -52,10 +52,11 @@ const navbar = () => {
           <button class="btn btn-outline-light text-light fs-5" type="submit">
             Search
           </button>
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>
+
 `
 }
 

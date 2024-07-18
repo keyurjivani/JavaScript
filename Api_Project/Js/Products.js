@@ -1,28 +1,8 @@
 import { createcart, createProduct, DeleteProduct, getcart, getProducts, updateProduct } from "../Api/All.api.js";
+import navbar from "../Compopnents/navbar.js";
 
-// let cart = await getcart()
-// const isExists = (id) =>{
-//     let temp = cart.filter((ele)=> ele.id==id)
-//     return temp.length > 0 ? true : false;
-// }
-  
+document.getElementById("navbar").innerHTML = navbar()
 
-// const cartproducts = (ele) =>{
-//     console.log(ele);
-//     if(isExists(ele.id)){
-//         cart.map((item,index)=>{
-//             if(item.id == ele.id){
-//                 cart[index].qty += 1;
-
-//             }
-//         })
-//         alert("ok")
-//     }else{
-//         createcart({ele})
-//         alert("add to cart")
-//     }
-//     localStorage.setItem("cart",JSON.stringify(cart))
-// }
 
 const Mapper = (data) => {
 
@@ -36,15 +16,25 @@ const Mapper = (data) => {
 
         let button = document.createElement('button');
         button.innerHTML = "Add to Cart"
+        button.style.width = '45%';
+        button.style.margin = '0 2%';
+        button.style.background = "#219C90"
+        button.style.color = "white"
+        button.style.borderRadius = "10px"
         button.addEventListener("click", () => {
-            // cartproducts(ele)
             alert("Add to cart")
             createcart(ele)
 
         })
 
         let div = document.createElement('div');
-
+        div.style.border = "1px solid"
+        div.style.textAlign = "center"
+        div.style.padding = "10px"
+        div.style.marginTop = "10px"
+        div.style.width = "350px"
+        div.style.borderRadius = "10px"
+        div.setAttribute("class", "divmain")
         div.append(img, title, price,button)
 
         document.getElementById("productList").append(div)
