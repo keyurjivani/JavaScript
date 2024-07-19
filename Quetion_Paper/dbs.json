@@ -1,0 +1,223 @@
+{
+    "quetion":[
+        {
+            "ques": "What is an array of objects in JavaScript?",
+            "options": {
+              "A": "A collection of objects stored in a single variable.",
+              "B": "A single object with multiple properties.",
+              "C": "A data type used to store numbers only.",
+              "D": "None of the above."
+            },
+            "correct": "A"
+          },
+          {
+            "ques":
+       "How do you access the 'name' property of the second object in the array products?",
+            "options": {
+              "A": "products[1].name",
+              "B": "products[2].name",
+              "C": "products.name[1]",
+              "D": "products.1.name"
+            },
+            "correct": "A"
+          },
+          {
+              "ques":
+       " Which method is used to add a new object to the end of an array?",
+              "options": {
+                "A": " push()",
+                "B": " pop()",
+                "C": "shift()",
+                "D": "unshift()"
+              },
+              "correct": "A"
+          },
+          {
+              "ques":
+       "Which method removes the first element from an array?",
+              "options": {
+                "A": "push()",
+                "B": "pop()",
+                "C": "shift()",
+                "D": "unshift()"
+              },
+              "correct": "C"
+          },
+          {
+              "ques":
+       "What is the output of products.length?  ",
+              "options": {
+                "A": "The number of objects in the products array.",
+                "B": "The first object in the products array.",
+                "C": "The last object in the products array.",
+                "D": "An error."
+              },
+              "correct": "A"
+          },
+          {
+              "ques":
+       "How do you iterate over each object in the products array?",
+              "options": {
+                "A": "Use a for loop.",
+                "B": "Use a while loop",
+                "C": "Use a forEach method.",
+                "D": "All of the above."
+              },
+              "correct": "D"
+          },
+          {
+              "ques":
+       "Which method can be used to filter objects based on a condition?",
+              "options": {
+                "A": "filter()",
+                "B": "map()",
+                "C": "reduce()",
+                "D": "find()"
+              },
+              "correct": "A"
+          },
+          {
+              "ques":
+       "How do you create a new array containing only the names of the products?",
+              "options": {
+                "A": "Use the map() method.",
+                "B": "Use the filter() method.",
+                "C": "Use the reduce() method.",
+                "D": "Use a for loop."
+              },
+              "correct": "A"
+          },
+          {
+              "ques":
+       "What does the reduce() method do with an array of objects?v",
+              "options": {
+                "A": "Creates a new array.",
+                "B": "Returns a single value.",
+                "C": "Filters elements from the array.",
+                "D": "Modifies the original array."
+              },
+              "correct": "B"
+          },
+          {
+              "ques":
+       "How do you sort the products array by price in ascending order?",
+              "options": {
+                "A": "Use the sort() method with a custom compare function.",
+                "B": "Use the sort() method without any arguments.",
+                "C": "Use the filter() method.",
+                "D": "Use the map() method."
+              },
+              "correct": "A"
+          },
+          {
+              "ques":
+       "What is the difference between find() and findIndex()?",
+              "options": {
+                "A": "find() returns the first element that satisfies the condition, while findIndex() returns its index.",
+                "B": "find() returns the index, while findIndex() returns the element.There is no difference.",
+                "C": "find() is for objects, and findIndex() is for arrays.",
+                "D": "There is no difference."
+              },
+              "correct": "A"
+          },
+          {
+              "ques":
+       "How do you create a deep copy of an array of objects?",
+              "options": {
+                "A": "Use the JSON.parse(JSON.stringify()) method.",
+                "B": "Use the slice() method.",
+                "C": "Use the spread operator (...).",
+                "D": "None of the above."
+              },
+              "correct": "A"
+          },
+          {
+              "ques":
+       "What is the time complexity of accessing an element in an array by index?",
+              "options": {
+                "A": "O(1)",
+                "B": "O(n)",
+                "C": "O(log n)",
+                "D": "Depends on the array size."
+              },
+              "correct": "A"
+          },
+          {
+              "ques":
+       "What is the time complexity of searching for an element in an unsorted array?",
+              "options": {
+                "A": "O(1)",
+                "B": "O(n)",
+                "C": "O(log n)",
+                "D": "Depends on the array size."
+              },
+              "correct": "B"
+          },
+          {
+              "ques":
+       "How can you improve the performance of array operations on large datasets?",
+              "options": {
+                "A": "Use appropriate data structures.",
+                "B": "Optimize algorithms.",
+                "C": "Profile code to identify bottlenecks.",
+                "D": "All of the above."
+              },
+              "correct": "D"
+          },
+          {
+              "ques":
+       "How would you implement a shopping cart using an array of objects?",
+              "options": {
+                "A": "Store products as objects in an array.",
+                "B": "Use methods to add, remove, and update products.",
+                "C": "Calculate total price based on product quantities.",
+                "D": "All of the above."
+              },
+              "correct": "D"
+          },
+          {
+              "ques":
+       "How would you implement a search functionality for a list of users using an array of objects?",
+              "options": {
+                "A": "Filter the array based on search criteria.",
+                "B": "Use regular expressions for case-insensitive search.",
+                "C": "Display search results in a user-friendly format.",
+                "D": "All of the above."
+              },
+              "correct": "D"
+          },
+          {
+              "ques":
+       "How would you handle pagination of a large dataset using an array of objects?",
+              "options": {
+                "A": "Divide the array into pages.",
+                "B": "Implement controls to navigate between pages.",
+                "C": "Load only the necessary data for the current page.",
+                "D": "All of the above."
+              },
+              "correct": "D"
+          },
+          {
+              "ques":
+       "How would you implement a sorting functionality for a list of tasks using an array of objects?",
+              "options": {
+                "A": "Allow users to sort by different criteria (e.g., due date, priority).",
+                "B": "Implement sorting algorithms (e.g., bubble sort, quick sort).",
+                "C": "Provide visual feedback for the sorted list.",
+                "D": "All of the above."
+              },
+              "correct": "D"
+          },
+          {
+              "ques":
+       "How would you optimize the performance of rendering a large list of items using an array of objects?",
+              "options": {
+                "A": "Use virtualization techniques (e.g., windowing).",
+                "B": "Implement lazy loading of data.",
+                "C": "Optimize DOM manipulation.",
+                "D": "All of the above."
+              },
+              "correct": "D"
+          }
+    ]
+}

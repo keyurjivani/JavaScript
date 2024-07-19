@@ -8,7 +8,7 @@ let questions = [
       C: "script href='script.js'",
       D: "script ref='script.js'",
     },
-    correct: "B'",
+    correct: "B",
   },
   {
     question: "How do you write 'Hello World' in an alert box?",
@@ -215,10 +215,11 @@ const ui = () => {
     optD.innerHTML = item.options.D;
 
     let ans = item.correct;
+    console.log(ans);
     let b1 = document.createElement("p");
     b1.innerHTML = "A : " + item.options.A;
     b1.addEventListener("click", () => {
-      if ("A" == ans) {
+      if ("A" === ans) {
         b1.style.backgroundColor = " green";
         b1.style.color = "White";
         b1.style.fontSize = "20px";
@@ -234,7 +235,7 @@ const ui = () => {
     let b2 = document.createElement("p");
     b2.innerHTML = "B : " + item.options.B;
     b2.addEventListener("click", () => {
-      if ("B" == ans) {
+      if ("B" === ans) {
         b2.style.background = "green";
         b2.style.color = "White";
         b2.style.fontSize = "20px";
