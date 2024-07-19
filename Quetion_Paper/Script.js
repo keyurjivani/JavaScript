@@ -5,34 +5,16 @@ import { api } from "./components/api.js";
 
 
 let score = 0
-const handleQue = async(e) =>{
-    e.preventDefault();
 
-    let data = {
-        que: document.getElementById("que").value,
-        options: {
-          A: document.getElementById("A").value,
-          B: document.getElementById("B").value,
-          C: document.getElementById("C").value,
-          D: document.getElementById("D").value,
-        },
-        correct: document.getElementById("correct").value,
-    }
-     console.log(data);
-    //  await api.post(data);
-}
-
-
-document.getElementById("Form").addEventListener("submit",handleQue)
 
 let data = await api.get()
 console.log(data);
 
 const ui =() =>{
     document.getElementById("app").innerHTML = ""
-    data.map((ele)=>{
-        let question = document.createElement("h4")
-        question.innerHTML = ele.que
+    data.map((ele,i)=>{
+        let question = document.createElement("h3")
+        question.innerHTML = `${i+1}.${ele.que}`
 
 
         let A = document.createElement("p")
@@ -51,7 +33,7 @@ const ui =() =>{
         
         const Check_Ans = (Ans)=>{
             return()=>{
-                if(ele.correct === Ans.innerHTML){
+                if(ele.correct == Ans.innerHTML){
                     console.log(Ans.innerHTML);
                     Ans.style.color = "green"
                     score++
@@ -81,9 +63,9 @@ const ui =() =>{
 
 let camera_button = document.querySelector("#start-camera");
 let video = document.querySelector("#video");
-let start_button = document.querySelector("#start-record");
-let stop_button = document.querySelector("#stop-record");
-let download_link = document.querySelector("#download-video");
+// let start_button = document.querySelector("#start-record");
+// let stop_button = document.querySelector("#stop-record");
+// let download_link = document.querySelector("#download-video");
 
 let camera_stream = null;
 let media_recorder = null;
@@ -95,27 +77,27 @@ camera_button.addEventListener('click', async function() {
     ui(data)
 });
 
-start_button.addEventListener('click', function() {
-	// set MIME type of recording as video/webm
-	media_recorder = new MediaRecorder(camera_stream, { mimeType: 'video/webm' });
+// start_button.addEventListener('click', function() {
+// 	// set MIME type of recording as video/webm
+// 	media_recorder = new MediaRecorder(camera_stream, { mimeType: 'video/webm' });
 
-	// event : new recorded video blob available 
-  media_recorder.addEventListener('dataavailable', function(e) {
-		blobs_recorded.push(e.data);
-	});
+// 	// event : new recorded video blob available 
+//   media_recorder.addEventListener('dataavailable', function(e) {
+// 		blobs_recorded.push(e.data);
+// 	});
 
-	// event : recording stopped & all blobs sent
-	media_recorder.addEventListener('stop', function() {
-		// create local object URL from the recorded video blobs
-		let video_local = URL.createObjectURL(new Blob(blobs_recorded, { type: 'video/webm' }));
-		download_link.href = video_local;
-	});
+// 	// event : recording stopped & all blobs sent
+// 	media_recorder.addEventListener('stop', function() {
+// 		// create local object URL from the recorded video blobs
+// 		let video_local = URL.createObjectURL(new Blob(blobs_recorded, { type: 'video/webm' }));
+// 		download_link.href = video_local;
+// 	});
 
-  // start recording with each recorded blob having 1 second video
-  media_recorder.start(1000);
-});
+//   // start recording with each recorded blob having 1 second video
+//   media_recorder.start(1000);
+// });
 
-stop_button.addEventListener('click', function() {
-	media_recorder.stop(); 
-});
+// stop_button.addEventListener('click', function() {
+// 	media_recorder.stop(); 
+// });
 

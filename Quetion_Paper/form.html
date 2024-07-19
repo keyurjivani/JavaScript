@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form_div{
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        input{
+            width: 250px;
+            height: 30px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body style="display: flex;
+justify-content: center; ">
+    <div class="form_div">
+        <a href="./index.html">Home</a>
+        <form id="Form"> <h2>Add Question in Form</h2>
+            <input type="text" id="que" placeholder="Question"><br>
+            <input type="text" id="A" placeholder="A"><br>
+            <input type="text" id="B" placeholder="B"><br>
+            <input type="text" id="C" placeholder="C"><br>
+            <input type="text" id="D" placeholder="D"><br>
+            <input type="text" id="correct" placeholder="Enter Correct Ans "><br>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+<script>
+    const handleQue = async(e) =>{
+    e.preventDefault();
+
+    let data = {
+        que: document.getElementById("que").value,
+        options: {
+          A: document.getElementById("A").value,
+          B: document.getElementById("B").value,
+          C: document.getElementById("C").value,
+          D: document.getElementById("D").value,
+        },
+        correct: document.getElementById("correct").value,
+    }
+     console.log(data);
+    //  await api.post(data);
+}
+
+
+document.getElementById("Form").addEventListener("submit",handleQue)
+</script>
+</html>

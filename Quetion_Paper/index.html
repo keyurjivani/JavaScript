@@ -4,28 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #start-camera{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .div{
+            border: 1px solid black;
+            width: 70%;
+            padding: 10px;
+            
+            
+        }
+        video{
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
-    <button id="start-camera">Start Camera</button>
-<video id="video" width="320" height="240" autoplay muted></video>
-<button id="start-record">Start Recording</button>
-<button id="stop-record">Stop Recording</button>
-<a id="download-video" download="test.webm">Download Video</a>
+<body style="display: flex;
+justify-content: center;">
+
+    <div class="div">
+        <a href="./form.html" style="text-align: center;">Add</a><br>
+    
+    <button id="start-camera">Start</button>
+    <video id="video" width="320" height="240" autoplay muted></video>
+    <!-- <button id="start-record">Start Recording</button>
+    <button id="stop-record">Stop Recording</button>
+    <a id="download-video" download="test.webm">Download Video</a> -->
 
 <br><br><br><br>
     <div id="score"></div>
     <div id="app"></div>
-    <div class="form_div">
-        <form id="Form"> <h2>Add Question in Form</h2>
-            <input type="text" id="que" placeholder="Question"><br>
-            <input type="text" id="A" placeholder="A"><br>
-            <input type="text" id="B" placeholder="B"><br>
-            <input type="text" id="C" placeholder="C"><br>
-            <input type="text" id="D" placeholder="D"><br>
-            <input type="text" id="correct" placeholder="Enter Correct Ans In String"><br>
-            <input type="submit">
-        </form>
-    </div>
+    
+</div>
 </body>
 <script type="module" src="./Script.js"></script>
 </html>
