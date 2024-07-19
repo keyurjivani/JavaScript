@@ -34,25 +34,8 @@ justify-content: center; ">
         </form>
     </div>
 </body>
+<script type="module" src="./form.js"></script>
 <script>
-    const handleQue = async(e) =>{
-    e.preventDefault();
 
-    let data = {
-        que: document.getElementById("que").value,
-        options: {
-          A: document.getElementById("A").value,
-          B: document.getElementById("B").value,
-          C: document.getElementById("C").value,
-          D: document.getElementById("D").value,
-        },
-        correct: document.getElementById("correct").value,
-    }
-     console.log(data);
-    //  await api.post(data);
-}
-
-
-document.getElementById("Form").addEventListener("submit",handleQue)
 </script>
 </html>
