@@ -87,3 +87,9 @@ let data = await getProducts()
 Mapper(data)
 
 document.getElementById("productData").addEventListener("submit", handleData)
+
+
+document.addEventListener("contextmenu",(e) => {
+    e.preventDefault();
+    alert("clicked context menu");
+    })
