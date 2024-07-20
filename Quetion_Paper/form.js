@@ -1,5 +1,10 @@
 import { api } from "./components/api.js";
 
+document.addEventListener('contextmenu',(e)=>{
+  e.preventDefault();
+  alert('click context menu')
+  });
+  
 const handleQue = async(e) =>{
 e.preventDefault();
 

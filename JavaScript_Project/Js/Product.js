@@ -58,6 +58,11 @@ array.map((ele)=>{
             cart.push(ele);
             localStorage.setItem('cart',JSON.stringify(cart));
             alert('Product Added to Cart')
+
+            localStorage.removeItem("array")
+            window.open('/JavaScript_Project/Pages/Order.html');
+
+            window.location.reload();
     })
 
     document.getElementById('button').append(button);

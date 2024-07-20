@@ -1,6 +1,9 @@
 import { api } from "./components/api.js";
 
-
+document.addEventListener('contextmenu',(e)=>{
+    e.preventDefault();
+    alert('click context menu')
+    });
 
 
 
@@ -74,6 +77,7 @@ camera_button.addEventListener('click', async function() {
 	video.srcObject = camera_stream;
     ui(data)
 });
+
 
 
 
