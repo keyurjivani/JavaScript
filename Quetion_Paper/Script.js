@@ -47,8 +47,16 @@ const ui =() =>{
                     // console.log(ele.correct);
                     // alert("wrong")
                     Ans.style.color = "red"
+                    // score--
+                    // if(score == 0){
+                    //     score = 0
+                    // }
+                    if(score >=1){
+                        score--
+                    }
                     
                 }
+                
                 document.getElementById("score").innerHTML = `Score : ${score}`;
                 A.disabled = true
                 B.disabled = true
