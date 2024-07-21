@@ -2,7 +2,7 @@
 
 export const api = {
     post: async(data)=>{
-        let req = await fetch (`https://db-json-3.onrender.com/quetion`,{
+        let req = await fetch (`https://db-json-5.onrender.com/quetion`,{
             method : "POST",
             headers : {"Content-type":"application/json"},
             body : JSON.stringify(data)
@@ -12,7 +12,7 @@ export const api = {
     },
 
     get:async()=>{
-        let req = await fetch(`https://db-json-3.onrender.com/quetion`);
+        let req = await fetch(`https://db-json-5.onrender.com/quetion`);
         let res = await req.json();
         return res;
     },
