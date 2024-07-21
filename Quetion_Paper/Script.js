@@ -38,22 +38,22 @@ const ui =() =>{
         const Check_Ans = (Ans)=>{
             return()=>{
                 if(ele.correct == Ans.innerHTML){
-                    console.log(Ans);
+                    // console.log(Ans);
                     Ans.style.color = "green"
                     score++
                 }else{
-                    console.log(Ans);
+                    // console.log(Ans);
 
                     // console.log(ele.correct);
-                    alert("wrong")
+                    // alert("wrong")
                     Ans.style.color = "red"
                     
                 }
                 document.getElementById("score").innerHTML = `Score : ${score}`;
-                // A.disabled = true
-                // B.disabled = true
-                // C.disabled = true
-                // D.disabled = true
+                A.disabled = true
+                B.disabled = true
+                C.disabled = true
+                D.disabled = true
             }
         }
         A.addEventListener("click",Check_Ans(A))
