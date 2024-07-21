@@ -1,9 +1,9 @@
 import { api } from "./components/api.js";
 
-// document.addEventListener('contextmenu',(e)=>{
-//     e.preventDefault();
-//     alert('click context menu')
-//     });
+document.addEventListener('contextmenu',(e)=>{
+    e.preventDefault();
+    alert('click context menu')
+    });
 
 
 
