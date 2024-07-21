@@ -1,9 +1,9 @@
 import { api } from "./components/api.js";
 
-document.addEventListener('contextmenu',(e)=>{
-    e.preventDefault();
-    alert('click context menu')
-    });
+// document.addEventListener('contextmenu',(e)=>{
+//     e.preventDefault();
+//     alert('click context menu')
+//     });
 
 
 
@@ -22,6 +22,7 @@ const ui =() =>{
 
         let A = document.createElement("p")
         A.innerHTML = `A: ${ele.options.A}`
+        console.log("A: " + A.innerHTML);
 
         let B = document.createElement("p")
         B.innerHTML = `B: ${ele.options.B}`
@@ -32,24 +33,27 @@ const ui =() =>{
         let D = document.createElement("p")
         D.innerHTML = `D: ${ele.options.D}`
 
-        console.log(ele.correct);
+        console.log("cA",ele.correct);
         
         const Check_Ans = (Ans)=>{
             return()=>{
                 if(ele.correct == Ans.innerHTML){
-                    console.log(Ans.innerHTML);
+                    console.log(Ans);
                     Ans.style.color = "green"
                     score++
                 }else{
-                    console.log(Ans.innerHTML);
+                    console.log(Ans);
+
+                    // console.log(ele.correct);
+                    alert("wrong")
                     Ans.style.color = "red"
                     
                 }
                 document.getElementById("score").innerHTML = `Score : ${score}`;
-                A.disabled = true
-                B.disabled = true
-                C.disabled = true
-                D.disabled = true
+                // A.disabled = true
+                // B.disabled = true
+                // C.disabled = true
+                // D.disabled = true
             }
         }
         A.addEventListener("click",Check_Ans(A))
