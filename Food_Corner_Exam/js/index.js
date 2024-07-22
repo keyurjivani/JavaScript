@@ -87,6 +87,10 @@ const UI = (product_data) =>{
             let id = ele.id
             handleCart(ele,id)
         })
+        buy.style.backgroundColor = "green"
+        buy.style.color = "white"
+        buy.style.borderRadius = "5px"
+        buy.style.width = "98%"
 
         let div = document.createElement("div");
         div.append(image,name,rating,city,price,category,buy)
