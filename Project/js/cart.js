@@ -48,7 +48,9 @@ const handleDiscount = (countp) => {
 
   let total_Discount = countp - discount;
   console.log(total_Discount, discount);
- let dis=MakeUi("p",discount)
+  let dis = document.createElement("p");
+  dis.innerHTML = `${discount}`
+//  let dis=MakeUi("p",discount)
 
  document.getElementById("bill1").innerHTML = `Discount(10%): ${discount}`
  document.getElementById("bill2").innerHTML = `Total Bill: ${total_Discount}`

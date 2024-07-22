@@ -46,3 +46,20 @@ export const getcart = async () => {
     let res = await req.json()
     return res
 }
+
+export const Deletecart = async (id) => {
+
+    let req = await fetch(`http://localhost:3000/Cart/${id}`, {
+        method: 'DELETE'
+    })
+}
+
+
+
+export const updatecart = async (id, product) => {
+    let req = await fetch(`http://localhost:3000/Cart/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(product)
+    })
+}

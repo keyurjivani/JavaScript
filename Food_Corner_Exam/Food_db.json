@@ -543,22 +543,6 @@
     }
   ],
   "Cart": [
-    {
-      "id": "1",
-      "name": "Classic Margherita Pizza",
-      "tags": [
-        "Pizza",
-        "Italian"
-      ],
-      "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
-      "rating": 4.6,
-      "mealType": [
-        "Dinner"
-      ],
-      "city": "Delhi",
-      "price": 1069.18,
-      "category": "Main Course",
-      "qty": 1
-    }
+    
   ]
 }
