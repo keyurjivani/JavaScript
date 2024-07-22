@@ -51,8 +51,19 @@ const handleCart = (ele) => {
 }
 
 
+const handleSearchValue = (value) =>{
+    let temp = product_data.filter((ele) => ele.name.includes(value));
+    console.log(temp);
+    UI(temp);
+}
 
+const handleSearchData = (e) => {
+    e.preventDefault();
+    let Searching = document.getElementById("Searching").value;
+    console.log(Searching);
+    handleSearchValue(Searching)
 
+}
 
 
 
@@ -103,7 +114,7 @@ const UI = (product_data) =>{
         document.getElementById("display").append(div)
     })
 }
-
+document.getElementById("search").addEventListener("submit",handleSearchData)
 
 document.getElementById("htl").addEventListener("click",()=>{
     let temp=product_data.sort((a,b)=>b.price-a.price);
