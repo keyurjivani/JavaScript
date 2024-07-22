@@ -1,6 +1,6 @@
 export const api = {
     post: async(data)=>{
-        let req = await fetch (`http://localhost:3000/User`,{
+        let req = await fetch (`https://food-db-json.onrender.com/User`,{
             method : "POST",
             headers : {"Content-type":"application/json"},
             body : JSON.stringify(data)
@@ -9,14 +9,14 @@ export const api = {
     },
 
     get:async()=>{
-        let req = await fetch(`http://localhost:3000/User`);
+        let req = await fetch(`https://food-db-json.onrender.com/User`);
         let res = await req.json();
         return res;
     },
 }
 
 export const createProduct = async (product) => {
-    let req = await fetch('http://localhost:3000/Products', {
+    let req = await fetch('https://food-db-json.onrender.com/Products', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(product)
@@ -25,7 +25,7 @@ export const createProduct = async (product) => {
 }
 
 export const getProducts = async () => {
-    let req = await fetch('http://localhost:3000/Products');
+    let req = await fetch('https://food-db-json.onrender.com/Products');
     let res = await req.json()
     return res
 }
@@ -33,7 +33,7 @@ export const getProducts = async () => {
 
 
 export const createcart = async (product) => {
-    let req = await fetch('http://localhost:3000/Cart', {
+    let req = await fetch('https://food-db-json.onrender.com/Cart', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(product)
@@ -42,14 +42,14 @@ export const createcart = async (product) => {
 }
 
 export const getcart = async () => {
-    let req = await fetch('http://localhost:3000/Cart');
+    let req = await fetch('https://food-db-json.onrender.com/Cart');
     let res = await req.json()
     return res
 }
 
 export const Deletecart = async (id) => {
 
-    let req = await fetch(`http://localhost:3000/Cart/${id}`, {
+    let req = await fetch(`https://food-db-json.onrender.com/Cart/${id}`, {
         method: 'DELETE'
     })
 }
@@ -57,7 +57,7 @@ export const Deletecart = async (id) => {
 
 
 export const updatecart = async (id, product) => {
-    let req = await fetch(`http://localhost:3000/Cart/${id}`, {
+    let req = await fetch(`https://food-db-json.onrender.com/Cart/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(product)
