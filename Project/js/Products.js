@@ -18,6 +18,7 @@ if(isLogin){
 
 
 const isExists = (id) =>{
+   
     let temp = cart.filter((ele)=> ele.id==id)
     return temp.length > 0 ? true : false;
 }
