@@ -1,4 +1,4 @@
-import { api } from "../Components/Api.js";
+import { api, getCityName } from "../Components/Api.js";
 
 
 let data = await api.get()
@@ -40,3 +40,5 @@ const handleData = (e) =>{
 
 
 document.getElementById("Form").addEventListener("submit",handleData)
+
+

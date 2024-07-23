@@ -63,3 +63,17 @@ export const updatecart = async (id, product) => {
         body: JSON.stringify(product)
     })
 }
+
+
+
+
+export const getCityName=async(lat, lng)=> {
+    const response = await fetch(
+    `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=21.2318445&lon=72.8211489`
+    );
+    const data = await response.json();
+    return data
+    console.log(data);
+    
+}
+    

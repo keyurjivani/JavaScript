@@ -1,33 +1,29 @@
-import { Deletecart, getcart, updatecart } from "../Components/Api.js";
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+import { Deletecart } from "../Components/Api.js";
+let location = JSON.parse(localStorage.getItem('location'))|| []
+// console.log(location);
 
-
-let cart_Producs = await getcart()
-console.log(cart_Producs);
-
-let cart = await cart_Producs
 const handleQty = (index, opr) => {
-    if (opr == "+") {
-        cart_Producs[index].qty += 1;
+  if (opr == "+") {
+    cart[index].qty += 1;
+  } else {
+    if (cart[index].qty > 1) {
+      cart[index].qty -= 1;
     } else {
-      if (cart_Producs[index].qty > 1) {
-        cart_Producs[index].qty -= 1;
-      } else {
-        alert("No Allow Zero Quantity");
-      }
+      alert("qty not zero");
     }
-    UI(cart_Producs)
-  
-  };
-  const handleDelete = (index) => {
-    Deletecart(index);
-    // updatecart(index, cart_Producs);
+  }
+  UI(cart);
+  localStorage.setItem("cart", JSON.stringify(cart));
+};
+const handleDelete = (index) => {
+  cart.splice(index, 1);
+  UI(cart);
+  localStorage.setItem("cart", JSON.stringify(cart));
+};
 
-    // cart.splice(index, 1);
-    UI();
-    localStorage.setItem("cart", JSON.stringify(cart));
-  };
-  
+
 
 
   const countprice = (total) => {
@@ -49,7 +45,11 @@ const handleQty = (index, opr) => {
    document.getElementById("bill2").innerHTML = `Total Bill: ${total_Discount}`
   
    document.getElementById("Cheack_Out").addEventListener("click",()=>{
+
+
+
     if (cart == "") {
+
       alert("Please Choice Product")
     }else{
       alert("Deliver 20 Min");
@@ -58,9 +58,6 @@ const handleQty = (index, opr) => {
       location.reload()
     }
    })
-  
-  
-  
    };
 
 
@@ -94,6 +91,8 @@ const UI = (cart_Producs) =>{
         let city = document.createElement("p");
         city.innerHTML = ele.city
         td3.append(city)
+
+        
 
         let td4 = document.createElement("td");
         let price = document.createElement("p");
@@ -149,6 +148,6 @@ const UI = (cart_Producs) =>{
     })
     countprice(total);
 }
-UI(cart_Producs)
+UI(cart)
 
 
