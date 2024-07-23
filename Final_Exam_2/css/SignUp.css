@@ -1,0 +1,58 @@
+body{
+    background: #000;
+    background-size: 100%;
+    background-repeat: repeat;
+    object-fit: fill;
+}
+
+#Form{
+    border: 1px solid rgb(255, 255, 255);
+    padding: 8px;
+    width: 500px;
+    background: linear-gradient(135deg, rgba(189, 189, 189, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    /* border:1px solid rgba(255, 255, 255, 0.18); */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+}
+
+#UserForm{
+    height: 610px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#LoginForm{
+    border: 1px solid black;
+    padding: 8px;
+    width: 500px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+#Form input{
+    width: 320px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#Form select{
+    width: 320px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#Form #submit{
+    width: 250px;
+    transition-duration: 0.9s;
+}
+#Form #submit:hover{
+    width: 320px;
+}
