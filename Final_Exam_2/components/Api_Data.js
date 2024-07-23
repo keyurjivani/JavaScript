@@ -29,4 +29,27 @@ export const api = {
         let res = await req.json();
         return res;
     },
+
+
+
+    DashBoardPost: async(data)=>{
+        let req = await fetch (`http://localhost:3000/DashBoard`,{
+            method : "POST",
+            headers : {"Content-type":"application/json"},
+            body : JSON.stringify(data)
+        })
+        let res = await req.json()
+    },
+
+    DashBoardGet:async()=>{
+        let req = await fetch(`http://localhost:3000/DashBoard`);
+        let res = await req.json();
+        return res;
+    },
+
+    Delete: async(id)=>{
+        let req = await fetch(`https://manage-db-json-3.onrender.com/User/${id}`,{
+            method : "DELETE",
+        })
+    }
 }
