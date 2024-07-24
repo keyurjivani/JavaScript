@@ -1,0 +1,7 @@
+#display{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+    margin: 12px;
+}

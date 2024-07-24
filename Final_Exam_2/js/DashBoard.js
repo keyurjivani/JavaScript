@@ -8,6 +8,8 @@ const Ui = (BookData) => {
 
         let url = document.createElement("img");
         url.src = ele.url;
+        url.style.width = "250px";
+        url.style.height = "250px";
 
         let main_div = document.createElement("div");
 
@@ -19,6 +21,9 @@ const Ui = (BookData) => {
 
         let acc_id = `${index}`;
         let acc_div = document.createElement("div");
+        acc_div.style.width = "200px"
+        // acc_div.style.border = "1px solid red"
+        acc_div.style.marginLeft = "10%"
         acc_div.id = acc_id;
         acc_div.classList.add("accordion");
 
@@ -54,7 +59,13 @@ const Ui = (BookData) => {
         });
 
         main_div.append(title, topic, acc_div);
+        // main_div.style.textAlign = "center";
         outer_div.append(url, main_div);
+        outer_div.style.border = '1px solid'
+        outer_div.style.width = '350px';
+        outer_div.style.textAlign = 'center';
+        outer_div.style.padding = '10px';
+        // outer_div.style.height = "max-content"
         document.getElementById("display").append(outer_div);
     });
 };

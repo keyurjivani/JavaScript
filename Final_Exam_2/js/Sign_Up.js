@@ -46,5 +46,42 @@ const handleData = (e) =>{
 }
 
 
+const handleValidation = (isValid, id, idx, eMsg, sMsg) => {
+    let value = document.getElementById(id).value
+    let input = document.getElementById(id)
+    input.classList.add("input")
+    if (isValid.test(value)) {
+        document.getElementById(id).style.border = '1px solid green'
+        document.getElementById(idx).innerHTML = sMsg
+    }
+    else {
+        document.getElementById(id).style.border = '1px solid red'
+        document.getElementById(idx).innerHTML = eMsg
+    }
+}
+
+
+const validName = /^[0-9A-Za-z]{6,10}$/;
+document.getElementById("username").addEventListener("input", ()=>{
+    handleValidation(validName,"username","u-msg","Name not valid","valid Name")
+})
+
+const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+document.getElementById("Email").addEventListener("input", ()=>{
+    handleValidation(validEmail,"Email","em-msg","Email Not Valid","Email Valid")
+})
+
+const validPassword = /^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[^0-9A-Za-z]).{8,32}$/;
+document.getElementById("Password").addEventListener("click", ()=>{
+    alert("max 8 Character, One Capital, One Special Character, One Number")
+    handleValidation(validPassword,"Password","p-msg","Not Valid Password","Valid Password")
+
+})
+document.getElementById("Password").addEventListener("input", ()=>{
+    handleValidation(validPassword,"Password","p-msg","Not Valid Password","Valid Password")
+})
+
+
+
 
 document.getElementById("Form").addEventListener("submit",handleData)
