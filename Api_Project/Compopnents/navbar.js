@@ -1,7 +1,7 @@
 const navbar = () => {
     return `<nav class="navbar navbar-expand-lg  bg-black">
     <div class="container-fluid">
-      <a class="navbar-brand text-light" href="">Logo </a>
+      <a class="navbar-brand text-light" href="">Novel </a>
       <button
         class="navbar-toggler text-light"
         type="button"

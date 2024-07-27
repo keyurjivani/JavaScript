@@ -1,4 +1,4 @@
-import { Deletecart, getcart } from "../Api/All.api.js";
+import { cart_API } from "../Api/All.api.js";
 import navbar from "../Compopnents/navbar.js";
 
 document.getElementById("navbar").innerHTML = navbar()
@@ -30,7 +30,7 @@ const countprice = (total) => {
     }else{
       alert("Your Products Deliver In 2 & 3 Working Day.....");
       console.log("data",data[0].id);
-      Deletecart(data[0].id)
+      cart_API.delete(data[0].id)
     }
    })
   
@@ -39,10 +39,45 @@ const countprice = (total) => {
    };
 
 
+   const handledelete=(index)=>{
+    cart_API.delete(index);
+    Mapper(data);
+}
+
+   const handleqty=(item,index,oper)=>{
+    if(oper=="+"){
+        let d={
+            id:item.id,
+            img:item.img,
+            title:item.title,
+            price:item.price,
+            category:item.category,
+            qty:item.qty+=1,
+        }
+        cart_API.patch(d,item.id);
+    }else{
+        if(data[index].qty>1){
+            let d={
+                id:item.id,
+                img:item.img,
+                title:item.title,
+                price:item.price,
+                category:item.category,
+                qty:item.qty-=1,
+            }
+            cart_API.patch(d,item.id);
+        }else{
+            handledelete(item.id);
+        }
+    }
+    Mapper(data);
+}
+
 const Mapper = (data) => {
     let total = 0
-    data.map((ele) => {
-        total += Number(ele.price)
+    document.getElementById("productList").innerHTML = ""
+    data.map((ele,index) => {
+        total += ele.price * ele.qty
         let title = document.createElement('h3');
         title.innerHTML = ele.title
         let price = document.createElement('h5');
@@ -50,8 +85,15 @@ const Mapper = (data) => {
         let img = document.createElement('img');
         img.src = ele.url
 
-        let btn1 = document.createElement('p');
-        btn1.innerHTML = "qty : 1";
+        let btn1=document.createElement("button");
+        btn1.innerHTML="-";
+        btn1.addEventListener("click",()=>handleqty(ele,index,"-"));
+
+        let btn2=document.createElement("button");
+        btn2.innerHTML=ele.qty;
+        let btn3=document.createElement("button");
+        btn3.innerHTML="+";
+        btn3.addEventListener("click",()=>handleqty(ele,index,"+"));
 
         let div = document.createElement('div');
         div.style.border = "1px solid"
@@ -61,7 +103,7 @@ const Mapper = (data) => {
         div.style.width = "350px"
         div.style.borderRadius = "10px"
         div.setAttribute("class", "divmain")
-        div.append(img, title, price,btn1)
+        div.append(img, title, price,btn1,btn2,btn3)
 
         document.getElementById("productList").append(div)
     })
@@ -69,6 +111,6 @@ const Mapper = (data) => {
     countprice(total)
 }
 
-let data = await getcart()
+let data = await cart_API.get()
 console.log(data);
 Mapper(data)

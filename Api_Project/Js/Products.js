@@ -1,10 +1,13 @@
-import { createcart, createProduct, DeleteProduct, getcart, getProducts, updateProduct } from "../Api/All.api.js";
+import { createProduct, DeleteProduct, getProducts, updateProduct } from "../Api/All.api.js";
+import { cart_API } from "../Api/All.api.js";
+
 import navbar from "../Compopnents/navbar.js";
 
 document.getElementById("navbar").innerHTML = navbar()
 
 
 const Mapper = (data) => {
+    document.getElementById("productList").innerHTML = ""
 
     data.map((ele) => {
         let title = document.createElement('h3');
@@ -25,7 +28,7 @@ const Mapper = (data) => {
         button.style.borderRadius = "10px"
         button.addEventListener("click", () => {
             alert("Add to cart")
-            createcart(ele)
+            cart_API.post(ele)
 
         })
 

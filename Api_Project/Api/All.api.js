@@ -68,38 +68,69 @@ export const updateProduct = async (id, product) => {
 
 
 
+export const cart_API={
+    get:async()=>{
+        let req=await fetch(`https://manage-db-json-3.onrender.com/Cart`)
+        let res=await req.json();
+        return res;
+    },
 
+    post:async(data)=>{
+        let req=await fetch(`https://manage-db-json-3.onrender.com/Cart`,{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(data)
+        })
+    },
 
-export const createcart = async (product) => {
-    let req = await fetch('https://manage-db-json-3.onrender.com/Cart', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(product)
-    })
-    let res = await req.json();
+    patch:async (data,id)=>{
+        let req=await fetch(`https://manage-db-json-3.onrender.com/Cart/${id}`,{
+            method:"PATCH",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(data)
+        })
+    },
+
+    delete:async (id)=>{
+        let req=await fetch(`https://manage-db-json-3.onrender.com/Cart/${id}`,{
+            method:"DELETE",
+        })
+    },
 }
 
-export const getcart = async () => {
-    let req = await fetch('https://manage-db-json-3.onrender.com/Cart');
-    let res = await req.json()
-    return res
-}
 
 
 
-export const Deletecart = async (id) => {
+// export const createcart = async (product) => {
+//     let req = await fetch('https://manage-db-json-3.onrender.com/Cart', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify(product)
+//     })
+//     let res = await req.json();
+// }
 
-    let req = await fetch(`https://manage-db-json-3.onrender.com/Cart/${id}`, {
-        method: 'DELETE'
-    })
-}
+// export const getcart = async () => {
+//     let req = await fetch('https://manage-db-json-3.onrender.com/Cart');
+//     let res = await req.json()
+//     return res
+// }
 
 
 
-export const updatecart = async (id, product) => {
-    let req = await fetch(`https://manage-db-json-3.onrender.com/Cart/${id}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(product)
-    })
-}
+// export const Deletecart = async (id) => {
+
+//     let req = await fetch(`https://manage-db-json-3.onrender.com/Cart/${id}`, {
+//         method: 'DELETE'
+//     })
+// }
+
+
+
+// export const updatecart = async (id, product) => {
+//     let req = await fetch(`https://manage-db-json-3.onrender.com/Cart/${id}`, {
+//         method: 'PATCH',
+//         headers: { 'Content-Type': 'application/json' },
+//         body: JSON.stringify(product)
+//     })
+// }
