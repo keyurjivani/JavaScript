@@ -13,6 +13,8 @@ const Mapper = (data) => {
         price.innerHTML = ele.price
         let img = document.createElement('img');
         img.src = ele.url
+        let Name = document.createElement('p');
+        Name.innerHTML = ele.Name
 
         let button = document.createElement('button');
         button.innerHTML = "Add to Cart"
@@ -35,7 +37,7 @@ const Mapper = (data) => {
         div.style.width = "350px"
         div.style.borderRadius = "10px"
         div.setAttribute("class", "divmain")
-        div.append(img, title, price,button)
+        div.append(img, title,Name, price,button)
 
         document.getElementById("productList").append(div)
     })

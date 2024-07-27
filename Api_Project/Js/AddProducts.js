@@ -11,16 +11,19 @@ const handleData = (e) => {
     let product = {
         title: document.getElementById('title').value,
         price: document.getElementById('price').value,
+        Name: document.getElementById('Name').value,
         url: document.getElementById('url').value
     }
     console.log(product);
 
     if (id == -1) {
         createProduct(product)
+        alert("Add Your Novel Book")
         // window.location.reload()
     }
     else {
         updateProduct(id, product)
+        alert("Update Your Novel Book")
     }
 
 }
@@ -29,6 +32,7 @@ const Handleupdate = (ele) => {
     document.getElementById('title').value = ele.title
     document.getElementById('price').value = ele.price
     document.getElementById('url').value = ele.url
+    document.getElementById('Name').value = ele.Name
     document.getElementById("submit").value="Update"
 
     id = ele.id
@@ -43,6 +47,8 @@ const Mapper = (data) => {
         price.innerHTML = ele.price
         let img = document.createElement('img');
         img.src = ele.url
+        let Name = document.createElement('p');
+        Name.innerHTML = ele.Name
 
         let update = document.createElement('button');
         update.innerHTML = "Update"
@@ -64,6 +70,7 @@ const Mapper = (data) => {
 
         deleteProduct.addEventListener("click", () => {
             DeleteProduct(ele.id)
+            // window.location.reload()
         })
         let div = document.createElement('div');
         div.style.border = "1px solid"
@@ -74,7 +81,7 @@ const Mapper = (data) => {
         div.style.width = "350px"
         div.setAttribute("class", "divmain")
 
-        div.append(img, title, price, deleteProduct, update)
+        div.append(img, title,Name, price, deleteProduct, update)
 
         document.getElementById("productList").append(div)
     })
@@ -89,7 +96,7 @@ Mapper(data)
 document.getElementById("productData").addEventListener("submit", handleData)
 
 
-document.addEventListener("contextmenu",(e) => {
-    e.preventDefault();
-    alert("clicked context menu");
-    })
+// document.addEventListener("contextmenu",(e) => {
+//     e.preventDefault();
+//     alert("clicked context menu");
+//     })

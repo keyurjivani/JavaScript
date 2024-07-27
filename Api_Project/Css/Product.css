@@ -1,0 +1,32 @@
+#productList {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(4,1fr); */
+    gap: 20px;
+    /* padding-left: 20px; */
+  }
+  #productList img {
+    width: 300px;
+    height: 280px;
+  }
+  
+  #productList p {
+    margin-top: 10px;
+  }
+  #productData{
+      border: 1px solid;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+  }
+  #productData:hover{
+      box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.5);
+  }
+  input{
+      width: 250px;
+      border-radius: 10px;
+  }
+  .divmain:hover{
+      box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.3);
+  }
