@@ -9,54 +9,61 @@
     <title>Document</title>
 </head>
 <body>
+   <!-- <div style="display: flex; flex-wrap: wrap;"> -->
+
    
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="/Project/components/1.png" width="50px" height="50px" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon rounded-1 bg-light"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/Food_Corner_Exam/Pages/index.html">Home</a>
+                <a class="nav-link active text-light" aria-current="page" href="/Food_Corner_Exam/Pages/index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Food_Corner_Exam/Pages/CartProducts.html">Cart</a>
+                <a class="nav-link text-light" href="/Food_Corner_Exam/Pages/CartProducts.html">Cart</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Food_Corner_Exam/Pages/Log_in.html">Log In</a>
+                <a class="nav-link text-light" href="/Food_Corner_Exam/Pages/Log_in.html">Log In</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Food_Corner_Exam/Pages/Sign_Up.html">Sign Up</a>
+                <a class="nav-link text-light" href="/Food_Corner_Exam/Pages/Sign_Up.html">Sign Up</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    <div>
-        <div>
+
+    <!-- </div> -->
+    <div >
+        <div style=" display: flex; justify-content: center; flex-wrap: wrap;">
           <form id="City" style="margin: 10px;">
-            <input type="text" placeholder="Enter City" id="_city">
-            <input type="submit" value="City">
+            <input type="text" placeholder="Enter City" id="_city" class="rounded-3">
+            <input type="submit" value="City" class="rounded-3 bg-dark text-light">
         </form>
 
         <form id="search" style="margin: 10px;">
-            <input type="text" placeholder="Enter Food Name" id="Searching">
-            <input type="submit" value="Food">
+            <input type="text" placeholder="Enter Food Name" id="Searching" class="rounded-3">
+            <input type="submit" value="Food" class="rounded-3 bg-dark text-light">
         </form>
+        <div style="margin: 10px;">
+          <button id="all" class="rounded-3 bg-dark text-light">All Price</button>
+          <button id="htl" class="rounded-3 bg-dark text-light">High To Low Price</button>
+          <button id="lth" class="rounded-3 bg-dark text-light">Low To High Price</button>
+      </div>
         </div>
     </div>
 
 
-    <div style="margin: 10px;">
-        <button id="all">All Price</button>
-        <button id="htl">High To Low Price</button>
-        <button id="lth">Low To High Price</button>
-    </div>
-    <div id="Citylocation"></div>
-    <div id="display"></div>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
 
+    
+    <div id="Citylocation"></div>
+    <div id="display" style="display: flex; justify-content: center; flex-wrap: wrap;"></div>
+  </div>
 </body>
 <script type="module" src="/Food_Corner_Exam/js/index.js"></script>
 </html>
